@@ -44,7 +44,9 @@
 .mT40{margin-top: 40px;}
 .mT50{margin-top: 50px;}
 .mT70{margin-top: 70px;}
+.mR10{margin-right: 10px;}
 .mR20{margin-right: 20px;}
+.mB20{margin-bottom: 20px;}
 .mB40{margin-bottom: 40px;}
 .mB50{margin-bottom: 50px;}
 .mB70{margin-bottom: 70px;}
@@ -87,6 +89,26 @@
 .Logo{
   &--header{
     width: 110px;
-    
   }
+  &--topHero{
+    width: 457px;
+  }
+}
+
+/*Arrow*/
+.Arrow{
+  cursor: pointer;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  right: auto;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  // transform: rotate(135deg) translateX(50%) translateY(50%);
+  left: 50%;
+  bottom: 30px;
+  right: auto;
+  transform: translateX(-50%) translateY(-50%) rotate(135deg);
 }

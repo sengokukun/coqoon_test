@@ -4,6 +4,7 @@
   height: 60px;
   background-color: rgba(0,0,0,0.35);
   position: fixed;
+  z-index: 99;
   &__Wrapper{
     @include flex();
     height: 100%;
@@ -25,6 +26,7 @@
     }
   }
   &__Link{
+    letter-spacing: 1px;
     color: #fff;
     font-size: 1.2rem;
     &--booth{
