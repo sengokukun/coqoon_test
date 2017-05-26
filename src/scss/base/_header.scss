@@ -3,6 +3,7 @@
   min-width: 1000px;
   height: 60px;
   background-color: rgba(0,0,0,0.35);
+  position: fixed;
   &__Wrapper{
     @include flex();
     height: 100%;
