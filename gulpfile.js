@@ -12,7 +12,9 @@ var uglify = require("gulp-uglify"); //js
 var imagemin = require("gulp-imagemin"); //img
 var imageminPngquant = require('imagemin-pngquant');
 var htmlmin = require('gulp-htmlmin'); //html圧縮
-var connect = require('gulp-connect-php');
+var fs = require("fs");
+var ejs = require("gulp-ejs");
+var rename = require("gulp-rename");
 
 ////////////////////////////////////////////////////
 
@@ -74,7 +76,7 @@ gulp.task('imagemin', function() {
 
 // html圧縮
 gulp.task('htmlmin', function() {
-  return gulp.src('src/**/*.html')
+  return gulp.src('dist/**/*.html')
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest('./dist/'))
   .pipe(browser.reload({
@@ -82,14 +84,18 @@ gulp.task('htmlmin', function() {
   }));
 });
 
-//php
-gulp.task('connect', function() {
-  return gulp.src('src/**/*.php')
-  .pipe(plumber())
-  .pipe(gulp.dest('./dist/'))
-  .pipe(browser.reload({
-    stream: true
-  }));
+gulp.task("ejs", function() {
+    var json = JSON.parse(fs.readFileSync("./src/pages.json")); //追記
+    gulp.src(
+       ["./src/ejs/**/*.ejs",'!' + "./src/ejs/**/_*.ejs"] //参照するディレクトリ、出力を除外するファイル
+    )
+    .pipe(ejs(json)) //jsonを追記
+    .pipe(plumber())
+    .pipe(rename({extname: ".html"})) //拡張子をhtmlに
+    .pipe(gulp.dest("dist/")) //出力先
+    .pipe(browser.reload({
+      stream: true
+    }));
 });
 
 // default
@@ -99,5 +105,5 @@ gulp.task("default", ["server"], function() {
   gulp.watch('./dist/css/**/*css',['combineMq']);
   gulp.watch('./src/**/*.html', ['htmlmin']);
   gulp.watch('./src/img/*',['imagemin']);
-  gulp.watch("./src/**/*.php",["connect"]);
+  gulp.watch("./src/ejs/**/*.ejs",['ejs']);
 });
