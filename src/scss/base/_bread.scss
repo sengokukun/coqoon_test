@@ -1,0 +1,25 @@
+.Bread{
+  @include flex();
+  &__List{
+    margin-right: 6px;
+    @include flex();
+    align-items: center;
+    &::after{
+      display: block;
+      content: ">";
+      margin-top: -2px;
+      margin-left: 6px;
+      font-size: 1.4rem;
+    }
+    &:last-child{
+      margin-right: 0;
+      &::after{
+        opacity: 0;
+      }
+    }
+  }
+  &__Link{
+    color: #111;
+    font-size: 1.4rem;
+  }
+}

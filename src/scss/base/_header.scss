@@ -1,0 +1,317 @@
+.Top {
+  .MasterHead {
+    position: static;
+    @include media ($pad) {
+      background-color: inherit;
+      box-shadow: none;
+      position: absolute;
+    }
+
+    &__Logo {
+      @include media ($pad) {
+        display: none;
+      }
+    }
+
+    .SpHeader {
+      .Toggle {
+        &__Line {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.MasterHead {
+  background-color: #fff;
+  @include flex();
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  justify-content: center;
+  padding: 0 30px 0 60px;
+  width: 100%;
+  z-index: 99;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  @include media ($pad) {
+    padding: 0;
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    height: 60px;
+    box-shadow: 1px 1px 1px #ddd;
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+
+  &__Logo {
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__Navigation{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    @include flex();
+    justify-content: space-between;
+     align-items: baseline;
+     @include media ($pad) {
+       width: 80%;
+       height: 100vh;
+       position: fixed;
+       top: 0;
+       bottom: 0;
+       left: auto;
+       right: 0;
+       background-color: rgba(0,0,0,0.9);
+       display: none;
+       z-index: 99;
+       overflow-y: scroll;
+     }
+    @include media ($sp) {
+      width: 70%;
+      height: 100vh;
+    }
+  }
+
+  &__Block {
+    display: flex;
+    width: 100%;
+    @include flex();
+    align-items: center;
+    @include media ($pad) {
+      width: 70%;
+      margin: 70px auto 0 auto;
+      box-sizing: border-box;
+      @include fd(column);
+      text-align: center;
+      overflow-y: scroll;
+    }
+    @include media ($sp) {
+      width: 100%;
+      padding: 0 30px;
+      margin: 70px 0;
+      box-sizing: border-box;
+    }
+  }
+
+  .underBar {
+    background:#111;
+  	height: 3px;
+  	display: block;
+  	position: absolute;
+  	width:64px;
+  	left:30px;
+    bottom: 0;
+  	margin-top: 5px;
+  }
+
+  &__List {
+    font-size: 1.6rem;
+    @include media ($pad) {
+      opacity: 0;
+      width: 100%;
+      border-bottom: 2px solid #fff;
+      &:last-child{
+        border: none;
+      }
+    }
+    &--right {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      align-self: flex-end;
+    }
+    &--description {
+      display: block;
+      height: 15px;
+      border-left: 2px solid #ccc;
+      a {
+        display: block;
+        line-height: 1;
+      }
+    }
+  }
+
+  &__Link {
+    font-family: $eigo_font;
+    color: #333;
+    height: 60px;
+    line-height: 60px;
+    display: block;
+    font-size: 1.5rem;
+    @include media ($pad) {
+      height: 100%;
+      width: 100%;
+      color: #fff;
+      line-height: 1em;
+      padding: 24px 0 15px;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      font-weight: bold;
+      text-align: justify;
+
+      span {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    }
+    @include media ($pc) {
+      padding: 0 22px;
+      transition: all 0.35s;
+    }
+
+    &--tw {
+      font-size: 2.3rem;
+    }
+
+    &--fb {
+      font-size: 2.3rem;
+    }
+  }
+
+  .PcHeader {
+    width: 100%;
+    max-width: 1200px;
+    height: 60px;
+    background-color: #fff;
+    @include flex();
+    align-items: center;
+    @include media ($pad) {
+      display: none;
+    }
+  }
+
+  .SpHeader {
+    display: block;
+    height: 100%;
+    @include media ($pc) {
+      display: none;
+    }
+
+    &__Icons {
+      width: 100%;
+      height: 100%;
+      @include flex();
+      align-items: center;
+    }
+
+    .Workskinds {
+      padding-bottom: 20px;
+
+      &__List {
+        padding: 12px 0;
+
+        &:first-child {
+          padding-top: 0;
+        }
+      }
+
+      &__Link {
+        width: 100%;
+        display: block;
+        color: #111;
+        font-size: rem;
+        font-family: $eigo_font;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+    }
+
+    // .sp-sns-menu {
+    //   padding: 24px 0;
+    //   width: 100%;
+    //
+    //   &__list {
+    //     padding-right: 50px;
+    //
+    //     &:last-child {
+    //       padding-right: 0;
+    //     }
+    //   }
+    //
+    //   &__link {
+    //     font-size: 2.6rem;
+    //   }
+    // }
+
+    .Toggle {
+      border: 0;
+      outline: none;
+      background-color: #fff;
+      box-sizing: border-box;
+      cursor: pointer;
+      appearance: none;
+      background: transparent;
+      z-index: 100;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+      &__Lines {
+        display: inline-block;
+        transition: all 0.4s;
+        box-sizing: border-box;
+        border: none;
+        position: relative;
+        width: 24px;
+        height: 24px;
+        z-index: 999999;
+      }
+
+      .active {
+        span:nth-of-type(1) {
+          -webkit-transform: translateY(20px) rotate(-45deg);
+          transform: translateY(8px) rotate(-45deg);
+        }
+
+        span:nth-of-type(2) {
+          opacity: 0;
+        }
+
+        span:nth-of-type(3) {
+          -webkit-transform: translateY(-20px) rotate(45deg);
+          transform: translateY(-10px) rotate(45deg);
+        }
+      }
+
+      .bg_white {
+        background-color: #fff;
+      }
+
+      &__Line {
+        transition: all 0.4s;
+        display: inline-block;
+        box-sizing: border-box;
+        border: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: #111;
+
+        &:nth-of-type(1) {
+          top: 0;
+        }
+
+        &:nth-of-type(2) {
+          top: 9px;
+        }
+
+        &:nth-of-type(3) {
+          bottom: 4px;
+        }
+      }
+    }
+  }
+}
