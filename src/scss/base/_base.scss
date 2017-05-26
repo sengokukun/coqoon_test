@@ -9,6 +9,7 @@ html {
   position: relative;
   left: 0;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 * {
@@ -39,6 +40,11 @@ a {
   transition: color 0.2s;
 }
 
+a:focus {
+    outline:none;
+}
+
+
 img {
   height: auto;
   max-width: 100%;
@@ -48,27 +54,14 @@ p {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
   font-size: 0;
   margin: 0;
   padding: 0;
   letter-spacing: 1px;
 }
 
-dd,
-dl,
-dt,
-li,
-p,
-td,
-th,
-tr,
-ul {
+dd,dl,dt,li,p,td,th,tr,ul,input,textarea {
   margin: 0;
   padding: 0;
 }
