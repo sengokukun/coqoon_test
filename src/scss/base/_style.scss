@@ -1,117 +1,48 @@
-.TopHero {
-  width: 100vw;
+.TopHero{
+  width: 100%;
   height: 100vh;
-  @include media ($pc) {
-    margin-bottom: -100px;
-  }
-
-  .TopbgvWrapper {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    top: -20px;
-    overflow: hidden;
-    // background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
-    background-size: cover;
-    background-position: center center;
-
-    &:before {
-      // ここに薄暗くする背景を入れる
-      content: ' ';
-      height: 100%;
-    }
-    @include media ($pad){
-      display: block;
-      background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
-      background-size: cover;
-      background-position: center center;
-      top: 0;
-    }
-  }
-
-  .yt-video{
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    z-index: -1;
-    @include media ($pad){
-      display: none;
-    }
-  }
-
-  #player {
+  background-image: url(../../img/bg_top.png);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 0;
+  &::before{
+    background-color: rgba(0,0,0,0.6);
     position: absolute;
     top: 0;
-    left: -15%;
-    bottom: 0;
-    margin: auto;
-    overflow: hidden;
-    height: 130%;
-    width: 130%;
-    min-width: calc(100vh * 16 / 9);
-    pointer-events: none;
-  }
-
-  .video-wrap {
-    width: 100%;
-    position: absolute;
     right: 0;
     bottom: 0;
-    z-index: -2;
-    @include media ($pad){
-      display: none;
-    }
+    left: 0;
+    content:'';
+    z-index: -1;
   }
-  // @include media ($pad) {
-  //   display: block;
-  //   background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
-  //   background-size: cover;
-  //   background-position: center center;
-  // }
-
-  .VideoPlay {
-    display: none;
-    width: 200px;
-    height: 60px;
-    line-height: 60px;
-    border: 1px solid #fff;
-    border-radius: 50px;
+  &__Wrapper{
+    @include flex();
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    @include fd(column);
+  }
+  &__Texts{
     text-align: center;
-    font-family: $eigo_font;
-    letter-spacing: 1px;
-    position: absolute;
-    left: 50%;
-    top: 68%;
-    bottom: auto;
-    right: auto;
-    transform: translateX(-50%) translateY(-50%);
-    font-weight: bold;
-    font-size: 2rem;
-    color: #fff;
-    @include media ($pad) {
-      display: block;
-    }
-  }
+    font-feature-settings : "palt";
 
-  &__Logo {
-    width: 130px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    bottom: auto;
-    right: auto;
-    z-index: 9999;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 1;
-    @include media ($pad) {
-      top: 40%;
-      z-index: 1;
-    }
   }
-  &__Svg{
-      fill: #111;
-    @include media ($pad) {
-      fill: #fff;
-    }
+  &__Logo{
+    margin-bottom: 46px;
+  }
+  &__Title{
+    font-size: 4.2rem;
+    font-weight: normal;
+    color: #fff;
+    letter-spacing: 10px;
+    margin-bottom: 14px;
+  }
+  &__SubTitle{
+    font-size: 2rem;
+    font-weight: normal;
+    color: #fff;
+    letter-spacing: 6px;
+    margin-bottom: 103px;
   }
 }

@@ -89,8 +89,8 @@ gulp.task("ejs", function() {
     gulp.src(
        ["./src/ejs/**/*.ejs",'!' + "./src/ejs/**/_*.ejs"] //参照するディレクトリ、出力を除外するファイル
     )
-    .pipe(ejs(json)) //jsonを追記
     .pipe(plumber())
+    .pipe(ejs(json)) //jsonを追記
     .pipe(rename({extname: ".html"})) //拡張子をhtmlに
     .pipe(gulp.dest("dist/")) //出力先
     .pipe(browser.reload({
