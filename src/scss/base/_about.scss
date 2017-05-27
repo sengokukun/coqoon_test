@@ -24,3 +24,8 @@
     height: 373px;
   }
 }
+
+.js-hideme{
+  opacity: 0;
+  transform: translateY(-20px);
+}
