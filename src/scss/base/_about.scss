@@ -1,0 +1,26 @@
+.About{
+  &__Wrapper{
+    @include flex();
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+  }
+  &__Right{
+    width: 50%;
+    margin-right: 30px;
+    box-sizing: border-box;
+  }
+  &__Left{
+    width: 50%;
+  }
+  &__Description{
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    line-height: 1.8em;
+    margin-bottom: 45px;
+  }
+  &__Image{
+    width: 400px;
+    height: 373px;
+  }
+}
