@@ -61,7 +61,7 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 1px;
 }
 
-dd,dl,dt,li,p,td,th,tr,ul,input,textarea {
+dd,dl,dt,li,p,td,th,tr,ul,input,textarea,figure {
   margin: 0;
   padding: 0;
 }
@@ -77,8 +77,8 @@ li {
   justify-content: center;
 }
 
-.Containr {
-  max-width: 870px;
+.Container {
+  max-width: 960px;
   width: 100%;
   margin: 0 auto;
   @include media ($pad) {
