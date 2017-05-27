@@ -2,7 +2,7 @@
 <html>
   <head>
     <% include common/_head %>
-    <title><%= pages[0].title  %></title>
+    <title><%= pages[0].title %></title>
     <meta name="description" content="<%= pages[0].description %>">
   </head>
   <body>
@@ -22,7 +22,7 @@
       <section class="About">
         <div class="About__Wrapper Container">
           <div class="About__Right">
-            <h2 class="SectionCaption mB30">COQOONって？</h2>
+            <h2 class="SectionCaption mB30"><%= caption[0].title  %></h2>
             <p class="About__Description">COQOONとは、無料でオンラインギャラリーを提供し、学生クリエイターの作品を売り買いできるサービスです。個人で制作した「作品」を<span class="font22">ブース</span>に登録して出品できます。</p>
             <a href="#" class="Button Button--green">ブースに登録する</a>
           </div>
@@ -33,37 +33,36 @@
       </section>
       <section class="Features">
         <div class="Features__Wrapper Container">
-          <h2 class="SectionCaption mB50">COQOON FEATURES</h2>
+          <h2 class="SectionCaption mB50"><%= caption[1].cap %></h2>
           <div class="Features__Block js-hideme">
             <section class="Features__Item">
               <figure class="Features__Image mB30">
                 <img src="/img/features01.png" alt="">
               </figure>
-              <h3 class="Features__Caption mB10">無料でいつでも出品</h3>
-              <p class="Features__Description">PC/スマホからいつでも出品いただけます。作った作品でお小遣い稼ぎに！</p>
+              <h3 class="Features__Caption mB10"><%= features[0].cap %></h3>
+              <p class="Features__Description"><%= features[0].desc %></p>
             </section>
             <section class="Features__Item">
               <figure class="Features__Image mB30">
                 <img src="/img/features02.png" alt="">
               </figure>
-              <h3 class="Features__Caption mB10">利益は売上の70%</h3>
-              <p class="Features__Description">COQOONは、オンラインでの取引のため多くの手数料がかかりません。</p>
+              <h3 class="Features__Caption mB10"><%= features[1].cap %></h3>
+              <p class="Features__Description"><%= features[1].desc %></p>
             </section>
             <section class="Features__Item">
               <figure class="Features__Image mB30">
                 <img src="/img/features03.png" alt="">
               </figure>
-              <h3 class="Features__Caption mB10">多種多様なギャラリー</h3>
-              <p class="Features__Description">家に置きっぱなしの作品。せっかく作ったデータ...などCOQOONならどんな作品でも出品できます！</p>
+              <h3 class="Features__Caption mB10"><%= features[2].cap %></h3>
+              <p class="Features__Description"><%= features[2].desc %></p>
             </section>
             <section class="Features__Item">
               <figure class="Features__Image mB30">
                 <img src="/img/features04.png" alt="">
               </figure>
-              <h3 class="Features__Caption mB10">安心な選べる取引</h3>
-              <p class="Features__Description">様々な料金取引が可能です。銀行振込/クレジットカードまたビットコインやプリペイドカード等での決済もご利用いただけます。</p>
+              <h3 class="Features__Caption mB10"><%= features[3].cap %></h3>
+              <p class="Features__Description"><%= features[3].desc %></p>
             </section>
-
           </div>
         </div>
       </section>
