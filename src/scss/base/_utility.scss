@@ -37,6 +37,10 @@
   }
 }
 
+/*font*/
+
+.font22{font-size: 2.2rem;}
+
 /*margin*/
 .mA{margin: 0 auto;}
 .mT10{margin-top: 10px;}
@@ -47,6 +51,7 @@
 .mR10{margin-right: 10px;}
 .mR20{margin-right: 20px;}
 .mB20{margin-bottom: 20px;}
+.mB30{margin-bottom: 30px;}
 .mB40{margin-bottom: 40px;}
 .mB50{margin-bottom: 50px;}
 .mB70{margin-bottom: 70px;}
@@ -111,4 +116,12 @@
   bottom: 30px;
   right: auto;
   transform: translateX(-50%) translateY(-50%) rotate(135deg);
+}
+
+/*SectionCaption*/
+.SectionCaption{
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 3.6rem;
+  color: #111;
 }

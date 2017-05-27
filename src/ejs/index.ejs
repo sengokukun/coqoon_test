@@ -8,8 +8,8 @@
   <body>
     <div class="wrapper">
       <% include common/_header %>
-      <div class="TopHero">
-        <div class="Container">
+      <section class="TopHero">
+        <div class="Containr">
           <div class="TopHero__Wrapper">
             <div class="TopHero__Texts mT40">
               <p class="TopHero__Logo"><img src="/img/logo.png" alt="COQOON" class="Logo Logo--topHero"></p>
@@ -20,7 +20,21 @@
           </div>
           <span class="Arrow js-Arrow" aria-hidden="true"></span>
         </div>
-      </div>
+      </section>
+      <section class="About">
+        <div class="Containr">
+          <div class="About__Wrapper">
+            <div class="About__Right">
+              <h2 class="SectionCaption mB30">COQOONって？</h2>
+              <p class="About__Description">COQOONとは、無料でオンラインギャラリーを提供し、学生クリエイターの作品を売り買いできるサービスです。個人で制作した「作品」を<span class="font22">ブース</span>に登録して出品できます。</p>
+              <a href="#" class="Button Button--green">ブースに登録する</a>
+            </div>
+            <div class="About__Left js-hideme">
+              <p class="About__Image"><img src="/img/about_image.png" alt=""></p>
+            </div>
+          </div>
+        </div>
+      </section>
       <% include common/_footer %>
     </div>
     <script src="/js/style.js"></script>
