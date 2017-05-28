@@ -61,9 +61,18 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 1px;
 }
 
-dd,dl,dt,li,p,td,th,tr,ul,input,textarea,figure {
+dd,dl,dt,li,p,td,th,tr,ul,ol,input,textarea,figure {
   margin: 0;
   padding: 0;
+  margin-start: 0;
+  margin-end: 0;
+  margin-before: 0;
+  margin-after: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
 }
 
 li {

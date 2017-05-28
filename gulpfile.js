@@ -98,20 +98,20 @@ gulp.task('htmlmin', function() {
 // });
 
 gulp.task('ejs', function () {
-        gulp.src(
-           ["./src/ejs/**/*.ejs",'!' + "./src/ejs/**/_*.ejs"]
-        )
-        .pipe(plumber())
-        .pipe(ejs(
-          {
-            config: JSON.parse(fileSystem.readFileSync('./src/data/config.json')),
-            page: JSON.parse(fileSystem.readFileSync('./src/data/page.json')),
-            json: JSON.parse(fileSystem.readFileSync('./src/data/pages.json')),
-            loop: require('./src/data/loop.js')
-          }
-        ))
-        .pipe(rename({extname: ".html"}))
-        .pipe(gulp.dest('./dist'));
+  gulp.src(
+    ["./src/ejs/**/*.ejs",'!' + "./src/ejs/**/_*.ejs"]
+  )
+  .pipe(plumber())
+  .pipe(ejs(
+    {
+      config: JSON.parse(fileSystem.readFileSync('./src/data/config.json')),
+      page: JSON.parse(fileSystem.readFileSync('./src/data/page.json')),
+      json: JSON.parse(fileSystem.readFileSync('./src/data/pages.json')),
+      loop: require('./src/data/loop.js')
+    }
+  ))
+  .pipe(rename({extname: ".html"}))
+  .pipe(gulp.dest('./dist'));
 });
 
 // default
