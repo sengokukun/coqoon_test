@@ -1,0 +1,44 @@
+.Banner {
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	z-index: 0;
+
+	&::before {
+		background-color: rgba(0,0,0,0.6);
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		content: '';
+		z-index: -1;
+	}
+
+	&--top {
+    padding: 60px 0;
+		background-image: url("/img/bg_banner01.png");
+	}
+
+  &__Wrapper{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    @include flex();
+    @include fd(column);
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__Caption{
+    font-weight: normal;
+    font-size: 2.8rem;
+  }
+
+  &__Text{
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    line-height: 2em;
+  }
+
+}
