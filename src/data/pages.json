@@ -2,11 +2,7 @@
   "pages":[
     {
       "title": "COQOON | トップページ",
-      "description": "COQOON公式サイト。QOCOONは学生クリエイターのためのオンラインギャラリーです。"
-    },
-    {
-      "title": "ニュースページタイトル",
-      "description": "ニュースページディスクリプション"
+      "desc": "COQOON公式サイト。QOCOONは学生クリエイターのためのオンラインギャラリーです。"
     }
   ],
   "caption":[

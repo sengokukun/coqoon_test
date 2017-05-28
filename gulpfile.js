@@ -12,10 +12,9 @@ var uglify = require("gulp-uglify"); //js
 var imagemin = require("gulp-imagemin"); //img
 var imageminPngquant = require('imagemin-pngquant');
 var htmlmin = require('gulp-htmlmin'); //html圧縮
-var fs = require("fs");
 var ejs = require("gulp-ejs");
 var rename = require("gulp-rename");
-
+var fileSystem = require('fs');
 ////////////////////////////////////////////////////
 
 
@@ -84,18 +83,35 @@ gulp.task('htmlmin', function() {
   }));
 });
 
-gulp.task("ejs", function() {
-    var json = JSON.parse(fs.readFileSync("./src/pages.json")); //追記
-    gulp.src(
-       ["./src/ejs/**/*.ejs",'!' + "./src/ejs/**/_*.ejs"] //参照するディレクトリ、出力を除外するファイル
-    )
-    .pipe(plumber())
-    .pipe(ejs(json)) //jsonを追記
-    .pipe(rename({extname: ".html"})) //拡張子をhtmlに
-    .pipe(gulp.dest("dist/")) //出力先
-    .pipe(browser.reload({
-      stream: true
-    }));
+// gulp.task("ejs", function() {
+//     var json = JSON.parse(fs.readFileSync("./src/pages.json")); //追記
+//     gulp.src(
+//        ["./src/ejs/**/*.ejs",'!' + "./src/ejs/**/_*.ejs"] //参照するディレクトリ、出力を除外するファイル
+//     )
+//     .pipe(plumber())
+//     .pipe(ejs(json)) //jsonを追記
+//     .pipe(rename({extname: ".html"})) //拡張子をhtmlに
+//     .pipe(gulp.dest("dist/")) //出力先
+//     .pipe(browser.reload({
+//       stream: true
+//     }));
+// });
+
+gulp.task('ejs', function () {
+        gulp.src(
+           ["./src/ejs/**/*.ejs",'!' + "./src/ejs/**/_*.ejs"]
+        )
+        .pipe(plumber())
+        .pipe(ejs(
+          {
+            config: JSON.parse(fileSystem.readFileSync('./src/data/config.json')),
+            page: JSON.parse(fileSystem.readFileSync('./src/data/page.json')),
+            json: JSON.parse(fileSystem.readFileSync('./src/data/pages.json')),
+            loop: require('./src/data/loop.js')
+          }
+        ))
+        .pipe(rename({extname: ".html"}))
+        .pipe(gulp.dest('./dist'));
 });
 
 // default

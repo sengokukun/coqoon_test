@@ -2,8 +2,8 @@
 <html>
   <head>
     <% include common/_head %>
-    <title><%= pages[0].title %></title>
-    <meta name="description" content="<%= pages[0].description %>">
+  <title><%= json.pages[0].title %></title>
+    <meta name="description" content="<%= json.pages[0].desc %>">
   </head>
   <body>
     <div class="wrapper">
@@ -22,7 +22,7 @@
       <section class="About">
         <div class="About__Wrapper Container">
           <div class="About__Right">
-            <h2 class="SectionCaption mB30"><%= caption[0].title  %></h2>
+            <h2 class="SectionCaption mB30"><%= json.caption[0].title %></h2>
             <p class="About__Description">COQOONとは、無料でオンラインギャラリーを提供し、学生クリエイターの作品を売り買いできるサービスです。個人で制作した「作品」を<span class="font22">ブース</span>に登録して出品できます。</p>
             <a href="#" class="Button Button--green">ブースに登録する</a>
           </div>
@@ -33,36 +33,17 @@
       </section>
       <section class="Features">
         <div class="Features__Wrapper Container">
-          <h2 class="SectionCaption mB50"><%= caption[1].cap %></h2>
-          <div class="Features__Block js-hideme">
-            <section class="Features__Item">
+          <h2 class="SectionCaption mB50"><%= json.caption[1].title %></h2>
+          <div class="Features__Block">
+            <% loop.forEach(function(json){ %>
+            <section class="Features__Item js-hideme">
               <figure class="Features__Image mB30">
-                <img src="/img/features01.png" alt="">
+                <img src="/img/features<%= json.imageNum %>.png" alt="">
               </figure>
-              <h3 class="Features__Caption mB10"><%= features[0].cap %></h3>
-              <p class="Features__Description"><%= features[0].desc %></p>
+              <h3 class="Features__Caption mB10"><%= json.cap %></h3>
+              <p class="Features__Description"><%= json.desc %></p>
             </section>
-            <section class="Features__Item">
-              <figure class="Features__Image mB30">
-                <img src="/img/features02.png" alt="">
-              </figure>
-              <h3 class="Features__Caption mB10"><%= features[1].cap %></h3>
-              <p class="Features__Description"><%= features[1].desc %></p>
-            </section>
-            <section class="Features__Item">
-              <figure class="Features__Image mB30">
-                <img src="/img/features03.png" alt="">
-              </figure>
-              <h3 class="Features__Caption mB10"><%= features[2].cap %></h3>
-              <p class="Features__Description"><%= features[2].desc %></p>
-            </section>
-            <section class="Features__Item">
-              <figure class="Features__Image mB30">
-                <img src="/img/features04.png" alt="">
-              </figure>
-              <h3 class="Features__Caption mB10"><%= features[3].cap %></h3>
-              <p class="Features__Description"><%= features[3].desc %></p>
-            </section>
+            <% }); %>
           </div>
         </div>
       </section>
