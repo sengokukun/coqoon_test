@@ -8,23 +8,33 @@ $(function() {
     }
   });
   $('.js-hideme').on('inview', function() {
-    TweenMax.to('.js-hideme', 1,{
+    TweenMax.to(this, 1,{
       opacity: 1,
       y: 0,
       delay: .3
-    }),
+    })
+  });
+  $('.js-Service__Item').on('inview', function() {
     TweenMax.to('.js-Border--top', .5,{
       height: "80px",
-      delay: 5
+      delay: 2,
+      ease: Power4.easeOut
     }),
     TweenMax.to('.js-Border--bottom', .5,{
       width: "232px",
-      delay: 5.4
+      delay: 2.4,
+      ease: Power4.easeOut
     })
   });
+  $('.js-SectionCaption').on('inview', function() {
+    TweenMax.to('.js-Border--Extra', 1,{
+      height: "437px",
+      delay: .8,
+      ease: Power1.easeOut
+    })
+  });
+
 });
-
-
 
 // $(document).ready(function() {
 //   $(window).scroll( function(){

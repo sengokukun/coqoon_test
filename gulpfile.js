@@ -104,10 +104,9 @@ gulp.task('ejs', function () {
   .pipe(plumber())
   .pipe(ejs(
     {
-      config: JSON.parse(fileSystem.readFileSync('./src/data/config.json')),
-      page: JSON.parse(fileSystem.readFileSync('./src/data/page.json')),
       json: JSON.parse(fileSystem.readFileSync('./src/data/pages.json')),
-      loop: require('./src/data/loop.js')
+      loop: require('./src/data/loop.js'),
+      com: require('./src/data/com.js')
     }
   ))
   .pipe(rename({extname: ".html"}))
