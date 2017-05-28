@@ -1,3 +1,32 @@
+.Wrapper {
+  @include flex();
+  @include fd(column);
+  align-items: center;
+  justify-content: center;
+}
+
+.Container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  @include media ($pad) {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+}
+
+.js-hideme{
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.js-hide{
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+
 /* ====================================================
 // br設定
 ==================================================== */

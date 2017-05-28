@@ -27,4 +27,7 @@
     background: -o-linear-gradient(left, #31bdd2, #39d2ba, #2b9e8c);
     background: linear-gradient(to right, #31bdd2, #39d2ba, #2b9e8c);
   }
+  &--clear{
+    border: 1px solid  #fff;
+  }
 }
