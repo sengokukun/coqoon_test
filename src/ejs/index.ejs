@@ -59,12 +59,26 @@
           <h2 class="SectionCaption mB20"><%= json.caption[2].title %></h2>
           <p class="Service__Description mB40">COQOONでは、作品をブースに登録する事で、無料でオンラインギャラリーに出品できます。<br class="pc-br">また、他のユーザーが出品した作品を買う事もできます。<br class="pc-br">まずは自分のブースを登録してみましょう!</p>
           <ol class="Service__Flow js-hideme">
-            <li class="Service__Item Service__Item--green"><span class="Service__Number">1</span><span class="Service__Text">個人で作った作品を<br class="pc-br">ブースに登録</span><span class="Border Border--top js-Border--top"></span><span class="Border Border--bottom js-Border--bottom"></span></li>
+            <li class="Service__Item Service__Item--green js-Service__Item poR"><span class="Service__Number">1</span><span class="Service__Text">個人で作った作品を<br class="pc-br">ブースに登録</span><span class="Border Border--top js-Border--top"></span><span class="Border Border--bottom js-Border--bottom"></span></li>
             <li class="Service__Item"><span class="Service__Number">2</span><span class="Service__Text">ブースに登録した<br class="pc-br">作品をギャラリーに出品</span></li>
             <li class="Service__Item"><span class="Service__Number">3</span><span class="Service__Text">出品された作品を<br class="pc-br">ギャラリー内で<br class="pc-br">売買しよう</span></li>
-            <li class="Service__Item Service__Item--extra"><span class="Service__Number">EX</span><span class="Service__Text Service_">作品を出品すると、<br class="pc-br">企業からスカウトがきます。</span></li>
+            <li class="Service__Item Service__Item--extra poR"><span class="Service__Number">EX</span><span class="Service__Text Service_">作品を出品すると、<br class="pc-br">企業からスカウトがきます。</span><span class="Border Border--Extra js-Border--Extra"></span></li>
           </ol>
           <a href="#" class="Button Button--green mA mT50">ブースに登録する</a>
+        </div>
+      </section>
+      <section class="Portfolio">
+        <div class="Portfolio__Wrapper Container">
+          <h2 class="SectionCaption js-SectionCaption mB20"><%= json.caption[3].title %></h2>
+          <p class="Portfolio__Description mB50">COQOONでは、ブースを自身のポートフォリオとしてご利用いただけます。<br class="pc-br">作品をブースに登録し出品すると、ブースを参考に企業からスカウトがもらえたり、直接声がかかります。また、ブースをポートフォリオとして使い就職活動をする事ができます。<br class="pc-br">作品を出品して企業からスカウトをもらおう！</p>
+          <div class="Portfolio__GetScout js-hideme">
+            <p class="Portfolio__GetScoutText">スカウトがもらえる企業一覧</p>
+            <div class="Portfolio__Companies">
+              <% com.forEach(function(com){ %>
+                <p class="Portfolio__CompanyImage"><img src="/img/com_<%= com.ComNum %>.png" alt=""></p>
+              <% }); %>
+            </div>
+          </div>
         </div>
       </section>
       <% include common/_footer %>

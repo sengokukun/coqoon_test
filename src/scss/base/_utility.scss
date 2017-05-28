@@ -183,8 +183,22 @@
     top: 50%;
     bottom: auto;
     right: auto;
-    transform: translateX(-0) translateY(187px);    
+    transform: translateX(-0) translateY(187px);
+  }
+  &--Extra{
+    display: block;
+    position: absolute;
+    width: 0;
+    border-bottom: 4px dashed #ec8c2c;
+    border-left: 4px dashed #ec8c2c;
+    background-color: inherit;
+    top: 52%;
+    right: 45%;
+    bottom: auto;
+    left: auto;
+    transform: translateX(-50%) translateY(107px);
   }
 }
 .js-Border--top{height: 0;}
 .js-Border--bottom{width: 0;}
+.js-Borer--Extar{height: 0;}
