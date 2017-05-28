@@ -120,6 +120,13 @@
 .jcB{justify-content: space-between;}
 .jcA{justify-content: space-around;}
 
+
+/*position*/
+.poR{position: relative;}
+.poA{position: absolute;}
+.poF{position: fixed;}
+.poS{position: static;}
+
 /*Logo*/
 .Logo{
   &--header{
@@ -155,3 +162,29 @@
   font-size: 3.6rem;
   color: #111;
 }
+
+.Border{
+  position: absolute;
+  display: block;
+  background-color: #39d0b7;
+  &--top{
+    width: 3px;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(110px);
+  }
+  &--bottom{
+    height: 3px;
+    top: 0;
+    right: 0;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-0) translateY(187px);    
+  }
+}
+.js-Border--top{height: 0;}
+.js-Border--bottom{width: 0;}
