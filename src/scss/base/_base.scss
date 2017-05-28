@@ -69,26 +69,3 @@ dd,dl,dt,li,p,td,th,tr,ul,input,textarea,figure {
 li {
   list-style-type: none;
 }
-
-.Wrapper {
-  @include flex();
-  @include fd(column);
-  align-items: center;
-  justify-content: center;
-}
-
-.Container {
-  max-width: 960px;
-  width: 100%;
-  margin: 0 auto;
-  @include media ($pad) {
-    width: 100%;
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
-}
-
-.b-line {
-  box-sizing: border-box;
-  border-bottom: 3px solid #000;
-}
