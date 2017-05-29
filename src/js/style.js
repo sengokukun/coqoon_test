@@ -29,7 +29,7 @@ $(function() {
   $('.js-SectionCaption').on('inview', function() {
     TweenMax.to('.js-Border--Extra', 1,{
       height: "437px",
-      delay: .8,
+      delay: 1,
       ease: Power1.easeOut
     })
   });
