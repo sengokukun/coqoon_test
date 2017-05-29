@@ -106,7 +106,8 @@ gulp.task('ejs', function () {
     {
       json: JSON.parse(fileSystem.readFileSync('./src/data/pages.json')),
       loop: require('./src/data/loop.js'),
-      com: require('./src/data/com.js')
+      com: require('./src/data/com.js'),
+      product: require('./src/data/top_gallery.js')
     }
   ))
   .pipe(rename({extname: ".html"}))

@@ -1,0 +1,68 @@
+.Gallery {
+	background-color: #f7f7f7;
+
+	&__Wrapper {
+		padding: 60px 0;
+	}
+
+	&__Description {
+		font-size: 1.6rem;
+		letter-spacing: 1px;
+	}
+}
+
+.Product{
+	&__Block {
+		@include flex();
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	&__Link{
+		display: block;
+		padding: 10px;
+		box-sizing: border-box;
+		width: 220px;
+		height: 300px;
+		background-color: #fefefe;
+		border-radius: 3px;
+		position: relative;
+		margin-top: 30px;
+	}
+	&__Figure{
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+	&__Image{
+		width: 200px;
+		height: 200px;
+		border: 5px solid #f7f7f7;
+		box-sizing: border-box;
+	}
+	&__Caption{
+		color: #333;
+		font-size: 1.4rem;
+		margin-bottom: 5px;
+	}
+	&__Description{
+		font-size: 1.2rem;
+		overflow: hidden;
+	  white-space: nowrap;
+	  text-overflow: ellipsis;
+		word-wrap: break-word;
+		color: #333;
+		margin-bottom: 10px;
+	}
+	&__Price{
+		font-size: 2rem;
+		font-weight: bold;
+		color: #333;
+		letter-spacing: 1.2px;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+	}
+}
+
+.js-Product__Item{
+	opacity: 0;
+	transform: translateY(-20px);
+}

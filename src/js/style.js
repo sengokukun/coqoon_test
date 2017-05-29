@@ -34,6 +34,13 @@ $(function() {
     })
   });
 
+  $('.js-Product__Block').on('inview', function() {
+		var delaySpeed=150;
+		var fadeSpeed=1000;
+		$('.js-Product__Item').each(function(i){
+			$(this).delay(i*(delaySpeed)).css({display:'block',opacity:'0'}).animate({opacity:'1'},fadeSpeed);
+		});
+	});
 });
 
 // $(document).ready(function() {
