@@ -1,7 +1,7 @@
 $(function() {
-  var w = $(window).width();
-  var x = 960;
-  if (w > x) {
+  var wid = $(window).width();
+  var x = 480;
+  if (wid > x) {
     $(window).scroll(function() {
       var MasterHead = $('.MasterHead');
       if ($(window).scrollTop() > 680) {
