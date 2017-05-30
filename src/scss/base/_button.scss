@@ -48,3 +48,9 @@
 		border: 1px solid #ffa892;
 	}
 }
+
+.Buttons{
+	@include flex();
+	align-items: center;
+	justify-content: center;
+}
