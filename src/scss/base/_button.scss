@@ -8,10 +8,6 @@
 	font-size: 1.8rem;
 	position: relative;
 	display: block;
-	@include media ($pad) {
-		width: 220px;
-		font-size: 1.4rem;
-	}
 
 	&::after {
 		position: absolute;
@@ -34,6 +30,25 @@
 
 	&--clear {
 		border: 1px solid #fff;
+	}
+	&--booth {
+		right: 15px;
+		top: 15px;
+		width: 100px;
+		height: 30px;
+		font-size: 1.2rem;
+		position: absolute;
+		line-height: 10px;
+		border: 1px solid #fff;
+		box-sizing: border-box;
+		border-radius: 3px;
+		padding: 8px 13px;
+		&::after{
+			display: none;
+		}
+		@include media ($pc) {
+			display: none;
+		}
 	}
 }
 

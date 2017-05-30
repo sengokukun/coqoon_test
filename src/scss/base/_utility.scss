@@ -132,11 +132,17 @@
 .Logo{
   &--header{
     width: 110px;
+    @include media ($sp) {
+      position: absolute;
+      width: 100px;
+      top: 20px;
+      left: 140px;
+    }
   }
   &--topHero{
     width: 457px;
-    @include media ($pad) {
-      width: 200px;
+    @include media ($sp) {
+      width: 150px;
     }
   }
   &--footer{
