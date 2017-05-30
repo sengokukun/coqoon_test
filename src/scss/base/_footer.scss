@@ -1,1 +1,26 @@
-
+.MasterFoot{
+  background-color: #222;
+  width: 100%;
+  &__Wrapper{
+    padding: 20px 0;
+    text-align: center;
+  }
+  &__Navigation{
+    @include flex();
+    justify-content: center;
+    align-items: center;
+  }
+  &__List{
+    margin-right: 30px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__Link{
+    color: #fff;
+  }
+  &__Copyright{
+    font-size: 1.2rem;
+    color: #fff;
+  }
+}
