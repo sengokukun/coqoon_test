@@ -100,7 +100,19 @@
             </article>
             <% }); %>
           </div>
-          <a href="#" class="Button Button--green mA mT30">ブースに登録する</a>          
+          <a href="#" class="Button Button--green mA mT30">ブースに登録する</a>
+        </div>
+      </section>
+      <section class="Question">
+        <div class="Question__Wrapper Container">
+          <h2 class="SectionCaption js-SectionCaption mB50"><%= json.caption[5].title %></h2>
+          <% qa.forEach(function(qa){ %>
+            <dl class="Question__Item js-Question__Item">
+              <dt class="Question__Title js-Question__Title poR"><span class="Question__Icon Question__Icon--question">Q</span><%= qa.qa %><span class="Question__Icon Question__Icon--plus">+</span></dt>
+              <dd class="Question__Answer js-Question__Answer"><%= qa.answer %></dd>
+            </dl>
+          <% }); %>
+          <a href="#" class="Button Button--green mA mT30">もっと詳しくみる</a>
         </div>
       </section>
       <% include common/_footer %>
