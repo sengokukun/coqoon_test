@@ -135,6 +135,9 @@
   }
   &--topHero{
     width: 457px;
+    @include media ($pad) {
+      width: 200px;
+    }
   }
   &--footer{
     width: 100px;
@@ -157,6 +160,9 @@
   bottom: 30px;
   right: auto;
   transform: translateX(-50%) translateY(-50%) rotate(135deg);
+  @include media ($pad) {
+    display: none;
+  }
 }
 
 /*SectionCaption*/
