@@ -41,6 +41,20 @@ $(function() {
 			$(this).delay(i*(delaySpeed)).css({display:'block',opacity:'0'}).animate({opacity:'1'},fadeSpeed);
 		});
 	});
+
+  $('.js-Question__Item').click(function() {
+	var $answer = $(this).find('.js-Question__Answer');
+  var $icon = $(this).find('.Question__Icon--plus');
+  if($answer.hasClass('open')) {
+    $answer.removeClass('open');
+    $answer.slideUp();
+    $icon.text('+');
+  } else {
+    $answer.addClass('open');
+    $answer.slideDown();
+    $icon.text('-');
+  }
+  });
 });
 
 // $(document).ready(function() {
