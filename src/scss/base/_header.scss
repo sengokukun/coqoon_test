@@ -1,40 +1,188 @@
-.MasterHead{
-  width: 100%;
-  min-width: 1000px;
-  height: 60px;
-  background-color: rgba(0,0,0,0.35);
-  transition: all .5s;
-  position: fixed;
-  z-index: 99;
-  &__Wrapper{
-    @include flex();
-    height: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 80px;
-    box-sizing: border-box;
-  }
-  &__Navigation{
-  }
-  &__Block{
-    width: 100%;
-    @include flex();
-  }
-  &__List{
-    padding-right: 30px;
-    &:last-child{
-      padding-right: 0;
+
+.MasterHead {
+	width: 100%;
+	min-width: 1000px;
+	height: 60px;
+	background-color: rgba(0,0,0,0.35);
+	transition: all 0.5s;
+	position: fixed;
+	z-index: 99;
+	@include media ($sp) {
+		min-width: auto;
+	  background-color: rgba(0,0,0,0.7);
+	}
+
+	&__Wrapper {
+		@include flex();
+		height: 100%;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 80px;
+		box-sizing: border-box;
+		@include media ($sp) {
+			padding: 0;
+			width: 100%;
+			text-align: justify;
+      display: block;
+		}
+	}
+
+	&__Navigation {
+    display: block;
+    @include media ($sp) {
+      display: none;
     }
-  }
-  &__Link{
-    letter-spacing: 1px;
-    color: #fff;
-    font-size: 1.2rem;
-    &--booth{
-      border: 1px solid  #fff;
-      box-sizing: border-box;
-      border-radius: 3px;
-      padding: 8px 13px;
+	}
+
+	&__Block {
+		width: 100%;
+		@include flex();
+		@include media ($sp) {
+		   @include fd(column);
+      margin-top: 60px;
+		}
+	}
+
+	&__List {
+		padding-right: 30px;
+
+		&:last-child {
+			padding-right: 0;
+      @include media ($sp) {
+        border-bottom: 0;
+      }
+      &:after{
+        @include media ($sp) {
+          display: none;
+        }
+      }
+		}
+    &:nth-of-type(5) {
+      @include media ($sp) {
+        border-bottom: 0;
+      }
     }
+    &:first-child{
+      @include media ($sp) {
+        border-top: 1px solid  #eee;
+      }
+    }
+		@include media ($sp) {
+			background-color: rgba(0,0,0,0.7);
+			padding-right: 0;
+			padding-left: 10px;
+			border-bottom: 1px solid #eee;
+      position: relative;
+		}
+    &::after {
+      @include media ($sp) {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        top: 25px;
+        right: 15px;
+        border-top: 1px solid #fff;
+        border-right: 1px solid #fff;
+        transform: rotate(45deg);
+      }
+    }
+	}
+
+	&__Link {
+		letter-spacing: 1px;
+		color: #fff;
+		font-size: 1.2rem;
+
+    @include media ($sp) {
+      font-size: 1.6rem;
+      display: block;
+      padding: 20px 0;
+    }
+
+		&--booth {
+			border: 1px solid #fff;
+			box-sizing: border-box;
+			border-radius: 3px;
+			padding: 8px 13px;
+      @include media ($sp) {
+        display: none;
+  		}
+		}
+	}
+}
+
+.Toggle {
+	border: 0;
+	outline: none;
+	background-color: #fff;
+	box-sizing: border-box;
+	cursor: pointer;
+	appearance: none;
+	background: transparent;
+	z-index: 100;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+  display: none;
+  @include media ($sp) {
+    display: block;
   }
+
+	&__Lines {
+		display: inline-block;
+		transition: all 0.4s;
+		box-sizing: border-box;
+		border: none;
+		position: relative;
+		width: 24px;
+		height: 24px;
+		z-index: 999999;
+	}
+
+	.active {
+		span:nth-of-type(1) {
+			-webkit-transform: translateY(20px) rotate(-45deg);
+			transform: translateY(8px) rotate(-45deg);
+		}
+
+		span:nth-of-type(2) {
+			opacity: 0;
+		}
+
+		span:nth-of-type(3) {
+			-webkit-transform: translateY(-20px) rotate(45deg);
+			transform: translateY(-10px) rotate(45deg);
+		}
+	}
+
+	.bg_white {
+		background-color: #fff;
+	}
+
+	&__Line {
+		transition: all 0.4s;
+		display: inline-block;
+		box-sizing: border-box;
+		border: none;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		border-radius: 2px;
+		background-color: #fff;
+
+		&:nth-of-type(1) {
+			top: 0;
+		}
+
+		&:nth-of-type(2) {
+			top: 9px;
+		}
+
+		&:nth-of-type(3) {
+			bottom: 4px;
+		}
+	}
 }
