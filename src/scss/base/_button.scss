@@ -8,6 +8,10 @@
 	font-size: 1.8rem;
 	position: relative;
 	display: block;
+	@include media ($pad) {
+		width: 220px;
+		font-size: 1.4rem;
+	}
 
 	&::after {
 		position: absolute;
