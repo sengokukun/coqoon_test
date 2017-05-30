@@ -105,6 +105,8 @@ gulp.task('ejs', function () {
   .pipe(ejs(
     {
       json: JSON.parse(fileSystem.readFileSync('./src/data/pages.json')),
+      header: require('./src/data/header.js'),
+      footer: require('./src/data/footer.js'),
       loop: require('./src/data/loop.js'),
       com: require('./src/data/com.js'),
       product: require('./src/data/top_gallery.js'),
