@@ -19,7 +19,7 @@
         </div>
         <span class="Arrow js-Arrow" aria-hidden="true"></span>
       </section>
-      <section class="About">
+      <section class="About" id="js-About">
         <div class="About__Wrapper Container">
           <div class="About__Right">
             <h2 class="SectionCaption mB30"><%= json.caption[0].title %></h2>
@@ -31,7 +31,7 @@
           </div>
         </div>
       </section>
-      <section class="Features">
+      <section class="Features" id="js-Features">
         <div class="Features__Wrapper Container">
           <h2 class="SectionCaption mB50"><%= json.caption[1].title %></h2>
           <div class="Features__Block">
@@ -54,7 +54,7 @@
           <a href="#" class="Button Button--clear mA">ギャラリーに行ってみる</a>
         </div>
       </div>
-      <section class="Service">
+      <section class="Service" id="js-Service">
         <div class="Service__Wrapper Container">
           <h2 class="SectionCaption mB20"><%= json.caption[2].title %></h2>
           <p class="Service__Description mB40">COQOONでは、作品をブースに登録する事で、無料でオンラインギャラリーに出品できます。<br class="pc-br">また、他のユーザーが出品した作品を買う事もできます。<br class="pc-br">まずは自分のブースを登録してみましょう!</p>
@@ -67,7 +67,7 @@
           <a href="#" class="Button Button--green mA mT50">ブースに登録する</a>
         </div>
       </section>
-      <section class="Portfolio">
+      <section class="Portfolio" id="js-Portfolio">
         <div class="Portfolio__Wrapper Container">
           <h2 class="SectionCaption js-SectionCaption mB20"><%= json.caption[3].title %></h2>
           <p class="Portfolio__Description mB50">COQOONでは、ブースを自身のポートフォリオとしてご利用いただけます。<br class="pc-br">作品をブースに登録し出品すると、ブースを参考に企業からスカウトがもらえたり、直接声がかかります。また、ブースをポートフォリオとして使い就職活動をする事ができます。<br class="pc-br">作品を出品して企業からスカウトをもらおう！</p>
@@ -81,7 +81,7 @@
           </div>
         </div>
       </section>
-      <section class="Gallery Product">
+      <section class="Gallery Product" id="js-Gallery">
         <div class="Gallery__Wrapper Container">
           <h2 class="SectionCaption js-SectionCaption mB20"><%= json.caption[4].title %></h2>
           <p class="Gallery__Description mB20">最近出品された作品をみてみましょう！</p>
@@ -103,7 +103,7 @@
           <a href="#" class="Button Button--green mA mT30">ブースに登録する</a>
         </div>
       </section>
-      <section class="Question">
+      <section class="Question" id="js-Question">
         <div class="Question__Wrapper Container">
           <h2 class="SectionCaption js-SectionCaption mB50"><%= json.caption[5].title %></h2>
           <% qa.forEach(function(qa){ %>
