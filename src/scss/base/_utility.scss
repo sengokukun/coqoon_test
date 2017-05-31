@@ -217,6 +217,9 @@
     bottom: auto;
     left: auto;
     transform: translateX(-50%) translateY(107px);
+    @include media ($sp) {
+      display: none;
+    }        
   }
 }
 .js-Border--top{height: 0;}

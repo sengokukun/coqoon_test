@@ -3,11 +3,17 @@
 
 	&__Wrapper {
 		padding: 60px 0;
+		@include media ($sp) {
+			padding: 40px 10px;
+		}
 	}
 
 	&__Flow {
 		@include flex();
     justify-content: center;
+		@include media ($sp) {
+			@include fd(column);
+		}
 	}
 
 	&__Item {
@@ -36,6 +42,13 @@
       background-color: #fefefe;
       border: 4px dashed #ec8c2c;
     }
+		@include media ($sp) {
+      width: 100%;
+			height: auto;
+			padding: 10px;
+			border-radius: 3px;
+			margin-bottom: 20px;
+		}
 	}
 
   &__Text{
@@ -46,6 +59,11 @@
     margin-top: 35px;
     margin-bottom: 10px;
     font-size: 5.4rem;
+		@include media ($sp) {
+			margin-top: auto;
+			font-size: 3rem;
+			margin-bottom: 0;
+		}
   }
   &__Description{
     font-size: 1.6rem;
