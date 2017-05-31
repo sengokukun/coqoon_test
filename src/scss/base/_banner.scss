@@ -18,6 +18,9 @@
 	&--top {
     padding: 60px 0;
 		background-image: url("/img/bg_banner01.png");
+		@include media ($sp) {
+			padding: 45px 0;
+		}
 	}
 
 	&--bottom{
@@ -33,17 +36,28 @@
     @include fd(column);
     justify-content: center;
     align-items: center;
+		@include media ($sp) {
+
+		}
   }
 
   &__Caption{
     font-weight: normal;
     font-size: 2.8rem;
+		@include media ($sp) {
+			font-size: 2.6rem;
+		}
   }
 
   &__Text{
     letter-spacing: 2px;
     font-size: 1.8rem;
     line-height: 2em;
+		@include media ($sp) {
+			text-align: justify;
+			font-size: 1.6rem;
+			margin-bottom: 30px;
+		}
   }
 
 }
