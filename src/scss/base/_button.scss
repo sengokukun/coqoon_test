@@ -10,8 +10,7 @@
 	display: block;
 	@include media ($sp) {
 		width: 70%;
-		margin: 0 auto;
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 	}
 
 	&::after {
@@ -31,10 +30,20 @@
 		background: -webkit-linear-gradient(bottom left, #31bdd2, #39d2ba 50%, #2b9e8c);
 		background: -o-linear-gradient(bottom left, #31bdd2, #39d2ba 50%, #2b9e8c);
 		background: linear-gradient(to top right, #31bdd2, #39d2ba 50%, #2b9e8c);
+		@include media ($sp) {
+			margin: 0 auto;
+		}
 	}
 
 	&--clear {
 		border: 1px solid #fff;
+	}
+	&--banner{
+		margin-bottom: 20px;
+		margin-right: 0;
+		&:last-child{
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -58,6 +67,10 @@
 	@include flex();
 	align-items: center;
 	justify-content: center;
+	@include media ($sp) {
+		width: 100%;
+		@include fd(column);
+	}
 }
 
 .LoginButton{

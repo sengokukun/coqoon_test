@@ -10,26 +10,6 @@ $(function() {
         $(MasterHead).css("background-color","rgba(0,0,0,0.35)");
       }
     });
-    $('.js-Question__Item').click(function() {
-  	var $answer = $(this).find('.js-Question__Answer');
-    var $icon = $(this).find('.Question__Icon--plus');
-    if($answer.hasClass('open')) {
-      $answer.removeClass('open');
-      $answer.slideUp();
-      $icon.text('+');
-    } else {
-      $answer.addClass('open');
-      $answer.slideDown();
-      $icon.text('-');
-    }
-    });
-    $('.js-Product__Block').on('inview', function() {
-  		var delaySpeed=150;
-  		var fadeSpeed=1000;
-  		$('.js-Product__Item').each(function(i){
-  			$(this).delay(i*(delaySpeed)).css({display:'block',opacity:'0'}).animate({opacity:'1'},fadeSpeed);
-  		});
-  	});
     $('a[href^="#"]').click(function() {
        var speed = 400;
        var href= $(this).attr("href");
@@ -39,6 +19,28 @@ $(function() {
        return false;
     });
   }
+
+  $('.js-Question__Item').click(function() {
+  var $answer = $(this).find('.js-Question__Answer');
+  var $icon = $(this).find('.Question__Icon--plus');
+  if($answer.hasClass('open')) {
+    $answer.removeClass('open');
+    $answer.slideUp();
+    $icon.text('+');
+  } else {
+    $answer.addClass('open');
+    $answer.slideDown();
+    $icon.text('-');
+  }
+  });
+
+  $('.js-Product__Block').on('inview', function() {
+    var delaySpeed=150;
+    var fadeSpeed=1000;
+    $('.js-Product__Item').each(function(i){
+      $(this).delay(i*(delaySpeed)).css({display:'block',opacity:'0'}).animate({opacity:'1'},fadeSpeed);
+    });
+  });
 
   var triggers = $('.Toggle__Lines'),
     body = $(document.body),
