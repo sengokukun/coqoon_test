@@ -18,6 +18,25 @@ $(function() {
        $('body,html').animate({scrollTop:position}, speed, 'swing');
        return false;
     });
+    $('.js-Service__Item').on('inview', function() {
+      TweenMax.to('.js-Border--top', .5,{
+        height: "80px",
+        delay: 2,
+        ease: Power4.easeOut
+      }),
+      TweenMax.to('.js-Border--bottom', .5,{
+        width: "232px",
+        delay: 2.4,
+        ease: Power4.easeOut
+      })
+    });
+    $('.js-SectionCaption').on('inview', function() {
+      TweenMax.to('.js-Border--Extra', 1,{
+        height: "437px",
+        delay: 1,
+        ease: Power1.easeOut
+      })
+    });
   }
 
   $('.js-Question__Item').click(function() {
@@ -67,25 +86,6 @@ $(function() {
       opacity: 1,
       y: 0,
       delay: .3
-    })
-  });
-  $('.js-Service__Item').on('inview', function() {
-    TweenMax.to('.js-Border--top', .5,{
-      height: "80px",
-      delay: 2,
-      ease: Power4.easeOut
-    }),
-    TweenMax.to('.js-Border--bottom', .5,{
-      width: "232px",
-      delay: 2.4,
-      ease: Power4.easeOut
-    })
-  });
-  $('.js-SectionCaption').on('inview', function() {
-    TweenMax.to('.js-Border--Extra', 1,{
-      height: "437px",
-      delay: 1,
-      ease: Power1.easeOut
     })
   });
 });
