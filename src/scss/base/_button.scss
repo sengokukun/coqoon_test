@@ -8,6 +8,10 @@
 	font-size: 1.8rem;
 	position: relative;
 	display: block;
+	@include media ($sp) {
+		width: 200px;
+		font-size: 1.4rem;
+	}
 
 	&::after {
 		position: absolute;
@@ -31,25 +35,6 @@
 	&--clear {
 		border: 1px solid #fff;
 	}
-	&--booth {
-		right: 15px;
-		top: 15px;
-		width: 100px;
-		height: 30px;
-		font-size: 1.2rem;
-		position: absolute;
-		line-height: 10px;
-		border: 1px solid #fff;
-		box-sizing: border-box;
-		border-radius: 3px;
-		padding: 8px 13px;
-		&::after{
-			display: none;
-		}
-		@include media ($pc) {
-			display: none;
-		}
-	}
 }
 
 .BuyBotton{
@@ -72,4 +57,33 @@
 	@include flex();
 	align-items: center;
 	justify-content: center;
+}
+
+.LoginButton{
+	width: 100px;
+	height: 30px;
+	line-height: 10px;
+	box-sizing: border-box;
+	border-radius: 3px;
+	&--booth {
+		color: #fff;
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		width: 100px;
+		height: 30px;
+		font-size: 1.2rem;
+		position: absolute;
+		line-height: 10px;
+		border: 1px solid #fff;
+		box-sizing: border-box;
+		border-radius: 3px;
+		padding: 8px 13px;
+		&::after{
+			display: none;
+		}
+		@include media ($pc) {
+			display: none;
+		}
+	}
 }

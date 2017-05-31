@@ -142,7 +142,7 @@
   &--topHero{
     width: 457px;
     @include media ($sp) {
-      width: 150px;
+      width: 180px;
     }
   }
   &--footer{
@@ -177,6 +177,10 @@
   letter-spacing: 1px;
   font-size: 3.6rem;
   color: #111;
+  @include media ($sp) {
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+  }
 }
 
 .Border{
