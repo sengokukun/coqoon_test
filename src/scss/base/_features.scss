@@ -2,11 +2,17 @@
   background-color: #f7f7f7;
   &__Wrapper{
     padding: 60px 0;
+    @include media ($sp) {
+      padding: 40px 10px;
+		}
   }
   &__Block{
     @include flex();
     justify-content: space-between;
     align-items: baseline;
+    @include media ($sp) {
+      @include fd(column);
+		}
   }
   &__Item{
     width: 240px;
@@ -18,9 +24,16 @@
     &:last-child{
       margin-right: 0;
     }
+    @include media ($sp) {
+      width: 100%;
+      margin: 20px 0;
+		}
   }
   &__Image{
     width: 120px;
+    @include media ($sp) {
+      width: 80px;
+    }
   }
   &__Caption{
     font-size: 1.8rem;
@@ -31,5 +44,9 @@
     letter-spacing: 2px;
     line-height: 1.8em;
     text-align: center;
+    @include media ($sp) {
+      font-size: 1.6rem;
+      text-align: justify;
+		}
   }
 }
