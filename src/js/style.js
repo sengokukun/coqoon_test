@@ -30,17 +30,16 @@ $(function() {
   			$(this).delay(i*(delaySpeed)).css({display:'block',opacity:'0'}).animate({opacity:'1'},fadeSpeed);
   		});
   	});
+    $('a[href^="#"]').click(function() {
+       var speed = 400;
+       var href= $(this).attr("href");
+       var target = $(href == "#" || href == "" ? 'html' : href);
+       var position = target.offset().top;
+       $('body,html').animate({scrollTop:position}, speed, 'swing');
+       return false;
+    });
   }
-  // toggleBtn.click(function() {
-  //   body.toggleClass('open');
-  //   if (body.hasClass('open')) {
-  //     $(triggers).addClass('active');
-  //     $('.MasterHead').find(menu).fadeIn(150);
-  //   } else {
-  //     $(triggers).removeClass('active');
-  //     $('.MasterHead').find(menu).fadeOut(150);
-  //   }
-  // });
+
   var triggers = $('.Toggle__Lines'),
     body = $(document.body),
 	  menu = $('.MasterHead__Navigation')
