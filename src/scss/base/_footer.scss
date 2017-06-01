@@ -10,11 +10,14 @@
     justify-content: center;
     align-items: center;
     @include media ($sp) {
-      width: 80%;
-      display: block;
+      width: 70%;
+      @include flex();
+      flex-wrap: wrap;
+      align-items: baseline;
       overflow: hidden;
       margin: 0 auto 15px;
       text-align: center;
+      justify-content: space-around;
   	}
   }
   &__List{
@@ -23,9 +26,9 @@
       margin-right: 0;
     }
     @include media ($sp) {
+      margin-right: 0;
       display: inline-block;
       text-align: center;
-      margin-right: 20px;
       &:first-child{
         margin-bottom: 10px;
       }
@@ -33,9 +36,10 @@
   }
   &__Link{
     color: #fff;
+    font-size: 1rem;
   }
   &__Copyright{
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #fff;
   }
 }

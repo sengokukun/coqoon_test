@@ -23,7 +23,6 @@
 	}
 
 	&__Item {
-		font-size: 1.6rem;
 		@include flex();
 		align-items: center;
 		margin: 10px;
@@ -49,21 +48,26 @@
 	}
 
 	&__Title {
+		font-size: 1.6rem;
 		@include media ($sp) {
-			width: 70%;
+			font-size: 1.4rem;
+			width: 60%;
 			white-space: normal;
 			word-wrap: normal;
+			line-height: 1.4em;
 		}
 	}
 
 	&__Description {
-		font-size: 1.6rem;
 	}
 
 	&__Answer {
 		font-size: 1.6rem;
 		padding: 20px 0 20px 80px;
 		border-top: 1px dashed #219d7c;
+		@include media ($sp) {
+			font-size: 1.4rem;
+		}
 	}
 }
 

@@ -33,7 +33,7 @@
       margin-right: 0;
 			@include media ($sp) {
 				margin-bottom: 30px;
-	    }			
+	    }
     }
 
 		&--green {
@@ -72,5 +72,6 @@
     font-size: 1.6rem;
     letter-spacing: 2px;
     line-height: 1.8em;
+		text-align: justify;
   }
 }
