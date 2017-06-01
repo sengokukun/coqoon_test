@@ -11,6 +11,7 @@
 	@include media ($sp) {
 		width: 70%;
 		font-size: 1.6rem;
+		align-self: center;
 	}
 
 	&::after {
