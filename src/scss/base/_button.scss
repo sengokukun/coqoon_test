@@ -1,3 +1,5 @@
+$color: #d3f169;
+
 .Button {
 	width: 280px;
 	height: 44px;
@@ -8,10 +10,19 @@
 	font-size: 1.8rem;
 	position: relative;
 	display: block;
+
 	@include media ($sp) {
 		width: 70%;
 		font-size: 1.6rem;
 		align-self: center;
+	}
+
+	&:hover{
+		animation: halftone 1s forwards;
+    background: radial-gradient(circle, #2b9e8c 0.15em, transparent 0.25em) 0 0 / 1.25em 1.25em, radial-gradient(circle, #2b9e8c 0.15em, transparent 0.25em) 6.25em 6.25em / 1.25em 1.25em;
+    color: adjust-hue(#fff,180);
+		border-radius: 30px;
+		border: none;
 	}
 
 	&::after {
@@ -27,14 +38,19 @@
 		transform: rotate(45deg);
 	}
 
+	&--top{
+		animation-name: bounceIn;
+	}
+
 	&--green {
-		background: -webkit-linear-gradient(bottom left, #31bdd2, #39d2ba 50%, #2b9e8c);
-		background: -o-linear-gradient(bottom left, #31bdd2, #39d2ba 50%, #2b9e8c);
-		background: linear-gradient(to top right, #31bdd2, #39d2ba 50%, #2b9e8c);
+		background-image: -webkit-linear-gradient(bottom left, #31bdd2, #39d2ba 50%, #2b9e8c);
+		background-image: -o-linear-gradient(bottom left, #31bdd2, #39d2ba 50%, #2b9e8c);
+		background-image: linear-gradient(to top right, #31bdd2, #39d2ba 50%, #2b9e8c);
 	}
 
 	&--clear {
 		border: 1px solid #fff;
+		box-sizing: border-box;
 	}
 	&--banner{
 		&:last-child{
