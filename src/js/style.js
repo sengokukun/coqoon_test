@@ -38,6 +38,13 @@ $(function() {
       })
     });
   }
+  $('.js-Button--top').on('inview',function(){
+    TweenMax.to(this, 1,{
+      opacity: 1,
+      scale: 1,
+      delay: .1
+    })
+  });
 
   $('.js-Question__Block').click(function() {
   var $answer = $(this).find('.js-Question__Answer');
