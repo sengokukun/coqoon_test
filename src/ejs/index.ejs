@@ -64,7 +64,7 @@
             <li class="Service__Item"><span class="Service__Number">3</span><span class="Service__Text">出品された作品を<br class="pc-br">ギャラリー内で<br class="pc-br">売買しよう</span></li>
             <li class="Service__Item Service__Item--extra poR"><span class="Service__Number">EX</span><span class="Service__Text Service_">作品を出品すると、<br class="pc-br">企業からスカウトがきます。</span><span class="Border Border--Extra js-Border--Extra"></span></li>
           </ol>
-          <a href="#" class="Button Button--green mA mT50">ブースに登録する</a>
+          <a href="#" class="Button Button--green mA pcmT50">ブースに登録する</a>
         </div>
       </section>
       <section class="Portfolio" id="js-Portfolio">
@@ -100,19 +100,19 @@
             </div>
             <% }); %>
           </div>
-          <a href="#" class="Button Button--green mA mT30">ギャラリーに行ってみる</a>
+          <a href="#" class="Button Button--green mA pcmT30">ギャラリーに行ってみる</a>
         </div>
       </section>
       <section class="Question" id="js-Question">
         <div class="Question__Wrapper Container">
-          <h2 class="SectionCaption js-SectionCaption mB50"><%= json.caption[5].title %></h2>
+          <h2 class="SectionCaption js-SectionCaption mB30"><%= json.caption[5].title %></h2>
           <% qa.forEach(function(qa){ %>
-            <dl class="Question__Item js-Question__Item">
-              <dt class="Question__Title js-Question__Title poR"><span class="Question__Icon Question__Icon--question">Q</span><%= qa.qa %><span class="Question__Icon Question__Icon--plus">+</span></dt>
+            <dl class="Question__Block js-Question__Block mB20">
+              <dt class="Question__Item js-Question__Title poR"><span class="Question__Icon Question__Icon--question">Q</span><span class="Question__Title"><%= qa.qa %></span><span class="Question__Icon Question__Icon--plus">+</span></dt>
               <dd class="Question__Answer js-Question__Answer"><%= qa.answer %></dd>
             </dl>
           <% }); %>
-          <a href="#" class="Button Button--green mA mT30">もっと詳しくみる</a>
+          <a href="#" class="Button Button--green mA">もっと詳しくみる</a>
         </div>
       </section>
       <div class="Banner Banner--bottom">

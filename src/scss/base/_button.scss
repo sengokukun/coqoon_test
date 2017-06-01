@@ -30,9 +30,6 @@
 		background: -webkit-linear-gradient(bottom left, #31bdd2, #39d2ba 50%, #2b9e8c);
 		background: -o-linear-gradient(bottom left, #31bdd2, #39d2ba 50%, #2b9e8c);
 		background: linear-gradient(to top right, #31bdd2, #39d2ba 50%, #2b9e8c);
-		@include media ($sp) {
-			margin: 0 auto;
-		}
 	}
 
 	&--clear {

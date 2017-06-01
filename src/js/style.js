@@ -39,7 +39,7 @@ $(function() {
     });
   }
 
-  $('.js-Question__Item').click(function() {
+  $('.js-Question__Block').click(function() {
   var $answer = $(this).find('.js-Question__Answer');
   var $icon = $(this).find('.Question__Icon--plus');
   if($answer.hasClass('open')) {

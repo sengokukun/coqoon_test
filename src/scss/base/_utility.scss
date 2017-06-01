@@ -72,12 +72,15 @@
 
 /*margin*/
 .mA{margin: 0 auto;}
+.mTA30{margin: 30px auto 0;}
+
 .mT10{margin-top: 10px;}
 .mT20{margin-top: 20px;}
 .mT40{margin-top: 40px;}
 .mT30{margin-top: 30px;}
 .mT50{margin-top: 50px;}
 .mT70{margin-top: 70px;}
+
 .mR10{margin-right: 10px;}
 .mR20{margin-right: 20px;}
 .mB10{margin-bottom: 10px;}
@@ -87,6 +90,9 @@
 .mB50{margin-bottom: 50px;}
 .mB70{margin-bottom: 70px;}
 .mTB60{margin: 60px 0;}
+
+.pcmT30{@include media ($sp) {margin-top: 0;}@include media ($pc) {margin-top: 30px;}}
+.pcmT50{@include media ($sp) {margin-top: 0;}@include media ($pc) {margin-top: 50px;}}
 
 /*Spmargin*/
 .spmT20{@include media ($sp){margin-top: 20px;} @include media ($pc){margin-top: 0;}}

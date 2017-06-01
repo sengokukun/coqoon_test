@@ -1,25 +1,36 @@
-.Question{
+.Question {
 	background-color: #fefefe;
-	&__Wrapper{
+
+	&__Wrapper {
 		padding: 60px 0;
+		@include media ($sp) {
+			padding: 40px 10px;
+		}
 	}
-	&__Item{
+
+	&__Block {
 		border: 1px solid #219d7c;
 		border-radius: 5px;
 		box-sizing: border-box;
-		margin-bottom: 20px;
-		&:last-child{
-			margin-bottom: 0;
+		cursor: pointer;
+		// margin-top: 20px;
+		&:nth-of-type(4){
+			margin-bottom: 50px;
+			@include media ($sp) {
+				margin-bottom: 30px;
+			}
 		}
 	}
-	&__Title{
+
+	&__Item {
 		font-size: 1.6rem;
 		@include flex();
 		align-items: center;
 		margin: 10px;
 	}
-	&__Icon{
-		&--question{
+
+	&__Icon {
+		&--question {
 			font-size: 2.6rem;
 			color: #219d7c;
 			border-right: 1px solid #219d7c;
@@ -27,7 +38,8 @@
 			box-sizing: border-box;
 			margin-right: 20px;
 		}
-		&--plus{
+
+		&--plus {
 			position: absolute;
 			right: 15px;
 			bottom: 10px;
@@ -35,16 +47,26 @@
 			color: #219d7c;
 		}
 	}
-	&__Description{
+
+	&__Title {
+		@include media ($sp) {
+			width: 70%;
+			white-space: normal;
+			word-wrap: normal;
+		}
+	}
+
+	&__Description {
 		font-size: 1.6rem;
 	}
-	&__Answer{
+
+	&__Answer {
 		font-size: 1.6rem;
 		padding: 20px 0 20px 80px;
 		border-top: 1px dashed #219d7c;
 	}
 }
 
-.js-Question__Answer{
+.js-Question__Answer {
 	display: none;
 }
