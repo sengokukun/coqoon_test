@@ -3,11 +3,17 @@
 
 	&__Wrapper {
 		padding: 60px 0;
+		@include media ($sp) {
+			padding: 45px 10px;
+		}
 	}
 
 	&__Description {
 		font-size: 1.6rem;
 		letter-spacing: 1px;
+		@include media ($sp) {
+			margin-bottom: 60px;
+		}
 	}
 }
 
@@ -16,6 +22,20 @@
 		@include flex();
 		flex-wrap: wrap;
 		justify-content: space-around;
+		@include media ($sp) {
+
+	  }
+	}
+
+	&__Item{
+		@include media ($sp) {
+			width: 48%;
+			margin: 0 0 4% 4%;
+			box-sizing: border-box;
+		}
+		&:nth-child(odd){
+			margin: 0 0 4%;
+		}
 	}
 
 	&__Link{
@@ -28,6 +48,10 @@
 		border-radius: 3px;
 		position: relative;
 		margin-top: 30px;
+		@include media ($sp) {
+			width: 100%;
+			margin-top: 0;
+	  }
 	}
 	&__Figure{
 		overflow: hidden;
