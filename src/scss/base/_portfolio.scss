@@ -3,6 +3,9 @@
 	box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
 	&__Wrapper{
 		padding: 60px 0;
+		@include media ($sp) {
+			padding: 40px 10px;
+    }
 	}
 	&__Description{
 		max-width: 740px;
@@ -14,6 +17,9 @@
 		width: 870px;
 		margin: 0 auto;
 		position: relative;
+		@include media ($sp) {
+			width: 100%;
+    }
 	}
 	&__GetScoutText{
 		font-size: 1.6rem;
@@ -36,8 +42,16 @@
 	&__CompanyImage{
 		box-sizing: border-box;
 		margin-right: 30px;
+		@include media ($sp) {
+			margin-right: 0;
+			width: 50%;
+			text-align: center;
+    }
 		&:nth-of-type(6){
 			margin-bottom: 20px;
+			@include media ($sp) {
+				margin-bottom: 0;
+	    }
 		}
 		&:last-child{
 			margin-right: 0;

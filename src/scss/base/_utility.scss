@@ -134,9 +134,10 @@
     width: 110px;
     @include media ($sp) {
       position: absolute;
-      width: 100px;
-      top: 20px;
-      left: 140px;
+      width: 80px;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-45%);
     }
   }
   &--topHero{
@@ -219,7 +220,7 @@
     transform: translateX(-50%) translateY(107px);
     @include media ($sp) {
       display: none;
-    }        
+    }
   }
 }
 .js-Border--top{height: 0;}

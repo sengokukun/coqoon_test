@@ -39,10 +39,12 @@
 		border: 1px solid #fff;
 	}
 	&--banner{
-		margin-bottom: 20px;
-		margin-right: 0;
 		&:last-child{
 			margin-bottom: 0;
+		}
+		@include media ($sp) {
+			margin-bottom: 20px;
+			margin-right: 0;
 		}
 	}
 }
@@ -74,25 +76,22 @@
 }
 
 .LoginButton{
-	width: 100px;
-	height: 30px;
 	line-height: 10px;
 	box-sizing: border-box;
 	border-radius: 3px;
 	&--booth {
+		text-align: center;
 		color: #fff;
 		position: absolute;
 		right: 15px;
 		top: 15px;
-		width: 100px;
-		height: 30px;
-		font-size: 1.2rem;
+		padding: 0 10px;
+		font-size: 1rem;
 		position: absolute;
-		line-height: 10px;
+		line-height: 26px;
 		border: 1px solid #fff;
 		box-sizing: border-box;
 		border-radius: 3px;
-		padding: 8px 13px;
 		&::after{
 			display: none;
 		}
