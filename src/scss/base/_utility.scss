@@ -81,6 +81,7 @@
 .mT50{margin-top: 50px;}
 .mT70{margin-top: 70px;}
 
+.mR5{margin-right: 5px;}
 .mR10{margin-right: 10px;}
 .mR20{margin-right: 20px;}
 .mB10{margin-bottom: 10px;}
@@ -139,11 +140,7 @@
   &--header{
     width: 110px;
     @include media ($sp) {
-      position: absolute;
-      width: 80px;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-45%);
+      display: none;
     }
   }
   &--topHero{
@@ -185,6 +182,7 @@
   font-size: 3.6rem;
   color: #111;
   @include media ($sp) {
+    letter-spacing: 1px;
     font-size: 2.6rem;
     margin-bottom: 20px;
   }
@@ -229,7 +227,10 @@
     }
   }
 }
+
+// javascript
 .js-Border--top{height: 0;}
 .js-Border--bottom{width: 0;}
 .js-Borer--Extar{height: 0;}
 .js-Button--top{opacity: 0; transform: scale(1.3);}
+.js-Product__Item {opacity: 0;transform: translateY(-20px);}

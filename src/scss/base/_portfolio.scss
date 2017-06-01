@@ -12,6 +12,7 @@
 		font-size: 1.6rem;
 		line-height: 1.8em;
 		letter-spacing: 1px;
+		text-align: justify;
 	}
 	&__GetScout{
 		width: 870px;
@@ -33,7 +34,7 @@
 	}
 	&__Companies{
 		border: 2px solid #ec8c2c;
-		padding: 30px 60px;
+		padding: 30px;
 		box-sizing: border-box;
 		@include flex();
 		flex-wrap: wrap;

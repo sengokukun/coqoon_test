@@ -12,7 +12,7 @@ $color: #d3f169;
 	display: block;
 
 	@include media ($sp) {
-		width: 70%;
+		width: 100%;
 		font-size: 1.6rem;
 		align-self: center;
 	}
@@ -68,6 +68,11 @@ $color: #d3f169;
 		right: 10px;
 		padding: 5px 15px;
 		z-index: 2;
+		border-radius: 30px;
+		font-size: 1rem;
+		@include media ($sp) {
+			bottom: 14px;
+		}
 	}
 	&--pink{
 		color: #ffa892;
@@ -93,7 +98,7 @@ $color: #d3f169;
 		text-align: center;
 		color: #fff;
 		position: absolute;
-		right: 15px;
+		right: 10px;
 		top: 15px;
 		padding: 0 10px;
 		font-size: 1rem;
