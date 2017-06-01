@@ -9,12 +9,27 @@
     @include flex();
     justify-content: center;
     align-items: center;
+    @include media ($sp) {
+      width: 80%;
+      display: block;
+      overflow: hidden;
+      margin: 0 auto 15px;
+      text-align: center;
+  	}
   }
   &__List{
     margin-right: 30px;
     &:last-child{
       margin-right: 0;
     }
+    @include media ($sp) {
+      display: inline-block;
+      text-align: center;
+      margin-right: 20px;
+      &:first-child{
+        margin-bottom: 10px;
+      }
+  	}
   }
   &__Link{
     color: #fff;
