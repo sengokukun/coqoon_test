@@ -37,6 +37,9 @@
   &__Link{
     color: #fff;
     font-size: 1rem;
+    &:hover{
+      text-decoration: underline;
+    }
   }
   &__Copyright{
     font-size: 1rem;
