@@ -6,8 +6,10 @@
     <meta name="description" content="<%= json.pages[0].desc %>">
   </head>
   <body>
+    <!-- 全体wrapper -->
     <div class="wrapper">
       <% include common/_header %>
+      <!-- ヒーロー画面 -->
       <section class="TopHero">
         <div class="TopHero__Wrapper Container">
           <div class="TopHero__Texts mT40">
@@ -18,7 +20,9 @@
           <a href="#" class="Button Button--green js-Button--top">ギャラリーに行ってみる</a>
         </div>
         <a href="#js-About"><span class="Arrow js-Arrow" aria-hidden="true"></span></a>
-      </section>
+      </section><!-- ヒーロー画面ここまで -->
+
+      <!-- アバウト -->
       <section class="About" id="js-About">
         <div class="About__Wrapper Container">
           <div class="About__Right">
@@ -30,7 +34,9 @@
             <p class="About__Image"><img src="/img/about_image.png" alt=""></p>
           </div>
         </div>
-      </section>
+      </section><!-- アバウトここまで -->
+
+      <!-- フィーチャーズ -->
       <section class="Features" id="js-Features">
         <div class="Features__Wrapper Container">
           <h2 class="SectionCaption mB50"><%= json.caption[1].title %></h2>
@@ -46,14 +52,18 @@
             <% }); %>
           </div>
         </div>
-      </section>
+      </section><!-- フィーチャーズここまで -->
+
+      <!-- バナー01-->
       <div class="Banner Banner--top">
         <div class="Banner__Wrapper Container">
           <h3 class="Banner__Caption mB30">作った。そのまま？</h3>
           <p class="Banner__Text mB50">「<span class="font22">部屋</span>」から「<span class="font22">外</span>」へ飾りに行こう。<br class="pc-br">COQOONのギャラリーには、ジャンルには表せられない程の<br class="pc-br">作品が出品されています。COQOONなら誰でもどんな作品でも<br class="pc-br">ギャラリーに飾ることができます。</p>
           <a href="#" class="Button Button--clear mA">ギャラリーに行ってみる</a>
         </div>
-      </div>
+      </div><!-- バナー01ここまで -->
+
+      <!-- サービス -->
       <section class="Service" id="js-Service">
         <div class="Service__Wrapper Container">
           <h2 class="SectionCaption mB20"><%= json.caption[2].title %></h2>
@@ -66,7 +76,9 @@
           </ol>
           <a href="#" class="Button Button--green mA pcmT50">ブースに登録する</a>
         </div>
-      </section>
+      </section><!-- サービスここまで -->
+
+      <!-- ポートフォリオ -->
       <section class="Portfolio" id="js-Portfolio">
         <div class="Portfolio__Wrapper Container">
           <h2 class="SectionCaption js-SectionCaption mB20"><%= json.caption[3].title %></h2>
@@ -80,7 +92,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section><!-- ポートフォリオここまで -->
+
+      <!-- ギャラリー -->
       <section class="Gallery Product" id="js-Gallery">
         <div class="Gallery__Wrapper Container">
           <h2 class="SectionCaption js-SectionCaption mB20"><%= json.caption[4].title %></h2>
@@ -102,7 +116,9 @@
           </div>
           <a href="#" class="Button Button--green mA pcmT30">ギャラリーに行ってみる</a>
         </div>
-      </section>
+      </section><!-- ギャラリーここまで -->
+
+      <!-- QA -->
       <section class="Question" id="js-Question">
         <div class="Question__Wrapper Container">
           <h2 class="SectionCaption js-SectionCaption mB30"><%= json.caption[5].title %></h2>
@@ -114,7 +130,9 @@
           <% }); %>
           <a href="#" class="Button Button--green mA">もっと詳しくみる</a>
         </div>
-      </section>
+      </section><!-- QAここまで -->
+
+      <!-- バナー02 -->
       <div class="Banner Banner--bottom">
         <div class="Banner__Wrapper Container">
           <p class="Banner__Caption mB30"><span class="mR5">作ったら。</span><span>飾りに行こう。</span></p>
@@ -123,9 +141,9 @@
             <a href="#" class="Button Button--clear Button--banner">ブースに登録する</a>
           </div>
         </div>
-      </div>
+      </div><!-- バナー02ここまで -->
       <% include common/_footer %>
-    </div>
+    </div><!-- 全体wrapperここまで -->
     <script src="/js/style.js"></script>
   </body>
 </html>

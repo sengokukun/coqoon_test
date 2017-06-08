@@ -1,387 +1,391 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=1,initial-scale=1,maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <script src="/js/modernizr-3.2.0.base.js"></script>
+    <script src="/js/min/jquery-1.11.3.min.js"></script>
+    <script src="/js/min/jquery.inview.min.js"></script>
+    <script src="/js/min/TweenMax.min.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/ie8/html5shiv.min.js"></script>
+    <script type="text/javascript" src="/js/ie8/selectivizr-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <title>COQOON | トップページ</title>
+    <meta name="description" content="COQOON公式サイト。QOCOONは学生クリエイターのためのオンラインギャラリーです。">
+  </head>
+  <body>
+    <!-- 全体wrapper -->
+    <div class="wrapper">
+      <!-- ヘッダー -->
+      <header class="MasterHead">
+        <div class="MasterHead__Wrapper">
+          <a href="/">
+            <img src="/img/logo.png" alt="COQOON" class="Logo Logo--header">
+          </a>
+          <!-- ハンバーガーメニュー -->
+          <a class="Toggle">
+            <span class="Toggle__Lines">
+            <span class="Toggle__Line"></span>
+            <span class="Toggle__Line"></span>
+            <span class="Toggle__Line"></span>
+            </span>
+          </a>
+          <!-- ハンバーガーメニューここまで -->
+          <nav class="MasterHead__Navigation">
+            <ul class="MasterHead__Block">
+              <li class="MasterHead__List"><a href="#" class="MasterHead__Link">ABOUT</a>
+              </li>
+              <li class="MasterHead__List"><a href="#" class="MasterHead__Link">FEATURES</a>
+              </li>
+              <li class="MasterHead__List"><a href="#" class="MasterHead__Link">SERVICE</a>
+              </li>
+              <li class="MasterHead__List"><a href="#" class="MasterHead__Link">PORTFOLIO / JOB</a>
+              </li>
+              <li class="MasterHead__List"><a href="#" class="MasterHead__Link">GALLERY</a>
+              </li>
+              <li class="MasterHead__List"><a href="#" class="MasterHead__Link">Q&amp;A</a>
+              </li>
+              <li class="MasterHead__List"><a href="#" class="MasterHead__Link MasterHead__Link--booth">ブースへ行く</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="#" class="LoginButton LoginButton--booth">ブースへ行く</a>
+        </div>
+      </header>
+      <!-- ヘッダーここまで-->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,user-scalable=1,initial-scale=1,maximum-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="shortcut icon" href="/img/favicon.ico">
-  <script src="/js/modernizr-3.2.0.base.js"></script>
-  <script src="/js/min/jquery-1.11.3.min.js"></script>
-  <script src="/js/min/jquery.inview.min.js"></script>
-  <script src="/js/min/TweenMax.min.js"></script>
-  <!--[if lt IE 9]>
-  <script type="text/javascript" src="js/ie8/html5shiv.min.js"></script>
-  <script type="text/javascript" src="/js/ie8/selectivizr-min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <![endif]-->
-  <!--[if gte IE 9]><!-->
+      <!-- ヒーロー画面 -->
+      <section class="TopHero">
+        <div class="TopHero__Wrapper Container">
+          <div class="TopHero__Texts mT40">
+            <p class="TopHero__Logo">
+              <img src="/img/logo.png" alt="COQOON" class="Logo Logo--topHero">
+            </p>
+            <h1 class="TopHero__Title"><span class="TopHero__TitleSpan mR20">作ったら。</span><span>飾りに行こう。</span></h1>
+            <h2 class="TopHero__SubTitle">学生クリエイターのための<br class="sp-br">オンラインギャラリー</h2>
+          </div>
+          <a href="#" class="Button Button--green js-Button--top">ギャラリーに行ってみる</a>
+        </div>
+        <a href="#js-About"><span class="Arrow js-Arrow" aria-hidden="true"></span></a>
+      </section>
+      <!-- ヒーロー画面ここまで -->
 
-  <title>COQOON | トップページ</title>
-  <meta name="description" content="COQOON公式サイト。QOCOONは学生クリエイターのためのオンラインギャラリーです。">
-</head>
+      <!-- アバウト -->
+      <section class="About" id="js-About">
+        <div class="About__Wrapper Container">
+          <div class="About__Right">
+            <h2 class="SectionCaption mB30">COQOONって？</h2>
+            <p class="About__Description">COQOONとは、無料でオンラインギャラリーを提供し、学生クリエイターの作品を売り買いできるサービスです。個人で制作した「作品」を<span class="font22">ブース</span>に登録して出品できます。</p>
+            <a href="#" class="Button Button--green">ブースに登録する</a>
+          </div>
+          <div class="About__Left js-hideme">
+            <p class="About__Image">
+              <img src="/img/about_image.png" alt="">
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- アバウトここまで -->
 
-<body>
-  <div class="wrapper">
-    <header class="MasterHead">
-      <div class="MasterHead__Wrapper">
-        <a href="/">
-          <img src="/img/logo.png" alt="COQOON" class="Logo Logo--header">
-        </a>
-        <!-- ハンバーガーメニュー -->
-        <a class="Toggle">
-          <span class="Toggle__Lines">
-        <span class="Toggle__Line"></span>
-          <span class="Toggle__Line"></span>
-          <span class="Toggle__Line"></span>
-          </span>
-        </a>
-        <!-- ハンバーガーメニューここまで -->
-        <nav class="MasterHead__Navigation">
-          <ul class="MasterHead__Block">
-            <li class="MasterHead__List"><a href="#" class="MasterHead__Link">ABOUT</a>
+      <!-- フィーチャーズ -->
+      <section class="Features" id="js-Features">
+        <div class="Features__Wrapper Container">
+          <h2 class="SectionCaption mB50">COQOON FEATURES</h2>
+          <div class="Features__Block">
+            <section class="Features__Item js-hideme">
+              <figure class="Features__Image mB30">
+                <img src="/img/features01.png" alt="">
+              </figure>
+              <h3 class="Features__Caption mB10">無料でいつでも出品</h3>
+              <p class="Features__Description">PC/スマホから、いつでも出品いただけます。作った作品でお小遣い稼ぎに！</p>
+            </section>
+            <section class="Features__Item js-hideme">
+              <figure class="Features__Image mB30">
+                <img src="/img/features02.png" alt="">
+              </figure>
+              <h3 class="Features__Caption mB10">売上利益が多い</h3>
+              <p class="Features__Description">COQOONでは、商品の売上利益を70%得ることができます。オンラインでの取引のため、多くの手数料がかかりません。</p>
+            </section>
+            <section class="Features__Item js-hideme">
+              <figure class="Features__Image mB30">
+                <img src="/img/features03.png" alt="">
+              </figure>
+              <h3 class="Features__Caption mB10">多種多様なギャラリー</h3>
+              <p class="Features__Description">家に置きっぱなしの作品。せっかく作ったデータ...などCOQOONならどんな作品でも出品できます！</p>
+            </section>
+            <section class="Features__Item js-hideme">
+              <figure class="Features__Image mB30">
+                <img src="/img/features04.png" alt="">
+              </figure>
+              <h3 class="Features__Caption mB10">選べる安心取引</h3>
+              <p class="Features__Description">希望に合った料金取引が可能です。銀行振込/クレジットカードまたビットコインなどの決済もご利用いただけます。</p>
+            </section>
+          </div>
+        </div>
+      </section>
+      <!-- フィーチャーズここまで -->
+
+      <!-- バナー01-->
+      <div class="Banner Banner--top">
+        <div class="Banner__Wrapper Container">
+          <h3 class="Banner__Caption mB30">作った。そのまま？</h3>
+          <p class="Banner__Text mB50">「<span class="font22">部屋</span>」から「<span class="font22">外</span>」へ飾りに行こう。
+            <br class="pc-br">COQOONのギャラリーには、ジャンルには表せられない程の
+            <br class="pc-br">作品が出品されています。COQOONなら誰でもどんな作品でも
+            <br class="pc-br">ギャラリーに飾ることができます。</p>
+          <a href="#" class="Button Button--clear mA">ギャラリーに行ってみる</a>
+        </div>
+      </div>
+      <!-- バナー01ここまで -->
+
+      <!-- サービス -->
+      <section class="Service" id="js-Service">
+        <div class="Service__Wrapper Container">
+          <h2 class="SectionCaption mB20">SERVICE POINT</h2>
+          <p class="Service__Description mB40">COQOONでは、作品をブースに登録する事で、無料でオンラインギャラリーに出品できます。
+            <br class="pc-br">また、他のユーザーが出品した作品を買う事もできます。
+            <br class="pc-br">まずは自分のブースを登録してみましょう!</p>
+          <ol class="Service__Flow js-hideme">
+            <li class="Service__Item Service__Item--green js-Service__Item poR"><span class="Service__Number">1</span><span class="Service__Text">個人で作った作品を<br class="pc-br">ブースに登録</span><span class="Border Border--top js-Border--top"></span><span class="Border Border--bottom js-Border--bottom"></span>
             </li>
-            <li class="MasterHead__List"><a href="#" class="MasterHead__Link">FEATURES</a>
+            <li class="Service__Item"><span class="Service__Number">2</span><span class="Service__Text">ブースに登録した<br class="pc-br">作品をギャラリーに出品</span>
             </li>
-            <li class="MasterHead__List"><a href="#" class="MasterHead__Link">SERVICE</a>
+            <li class="Service__Item"><span class="Service__Number">3</span><span class="Service__Text">出品された作品を<br class="pc-br">ギャラリー内で<br class="pc-br">売買しよう</span>
             </li>
-            <li class="MasterHead__List"><a href="#" class="MasterHead__Link">PORTFOLIO / JOB</a>
+            <li class="Service__Item Service__Item--extra poR"><span class="Service__Number">EX</span><span class="Service__Text Service_">作品を出品すると、<br class="pc-br">企業からスカウトがきます。</span><span class="Border Border--Extra js-Border--Extra"></span>
             </li>
-            <li class="MasterHead__List"><a href="#" class="MasterHead__Link">GALLERY</a>
+          </ol>
+          <a href="#" class="Button Button--green mA pcmT50">ブースに登録する</a>
+        </div>
+      </section>
+      <!-- サービスここまで -->
+
+      <!-- ポートフォリオ -->
+      <section class="Portfolio" id="js-Portfolio">
+        <div class="Portfolio__Wrapper Container">
+          <h2 class="SectionCaption js-SectionCaption mB20">PORTFOLIO / JOB</h2>
+          <p class="Portfolio__Description mB50">COQOONでは、ブースを自身のポートフォリオとしてご利用いただけます。
+            <br class="pc-br">作品をブースに登録し出品すると、ブースを参考に企業からスカウトがもらえたり、直接声がかかります。また、ブースをポートフォリオとして使い就職活動をする事ができます。
+            <br class="pc-br">作品を出品して企業からスカウトをもらおう！</p>
+          <div class="Portfolio__GetScout js-hideme">
+            <p class="Portfolio__GetScoutText">スカウトがもらえる企業一覧</p>
+            <div class="Portfolio__Companies">
+              <p class="Portfolio__CompanyImage">
+                <img src="/img/com_01.png" alt="">
+              </p>
+              <p class="Portfolio__CompanyImage">
+                <img src="/img/com_02.png" alt="">
+              </p>
+              <p class="Portfolio__CompanyImage">
+                <img src="/img/com_03.png" alt="">
+              </p>
+              <p class="Portfolio__CompanyImage">
+                <img src="/img/com_04.png" alt="">
+              </p>
+              <p class="Portfolio__CompanyImage">
+                <img src="/img/com_05.png" alt="">
+              </p>
+              <p class="Portfolio__CompanyImage">
+                <img src="/img/com_06.png" alt="">
+              </p>
+              <p class="Portfolio__CompanyImage">
+                <img src="/img/com_07.png" alt="">
+              </p>
+              <p class="Portfolio__CompanyImage">
+                <img src="/img/com_08.png" alt="">
+              </p>
+              <p class="Portfolio__CompanyImage">
+                <img src="/img/com_09.png" alt="">
+              </p>
+              <p class="Portfolio__CompanyImage">
+                <img src="/img/com_10.png" alt="">
+              </p>
+              <p class="Portfolio__CompanyImage">
+                <img src="/img/com_11.png" alt="">
+              </p>
+              <p class="Portfolio__CompanyImage">
+                <img src="/img/com_12.png" alt="">
+              </p>
+              <p class="Portfolio__CompanyImage">
+                <img src="/img/com_13.png" alt="">
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ポートフォリオここまで -->
+
+      <!-- ギャラリー -->
+      <section class="Gallery Product" id="js-Gallery">
+        <div class="Gallery__Wrapper Container">
+          <h2 class="SectionCaption js-SectionCaption mB20">ABOUT GALLERY</h2>
+          <p class="Gallery__Description mB20">最近出品された作品をみてみましょう！</p>
+          <div class="Product__Block js-Product__Block js-hideme">
+            <div class="Product__Item js-Product__Item">
+              <a href="#" class="Product__Link">
+                <figure class="Product__Figure">
+                  <img src="../img/gallery.png" alt="" class="Product__Image">
+                </figure>
+                <p class="Product__Caption">青いドア</p>
+                <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
+                <span class="Product__Price">¥ 500</span>
+                <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
+              </a>
+            </div>
+            <div class="Product__Item js-Product__Item">
+              <a href="#" class="Product__Link">
+                <figure class="Product__Figure">
+                  <img src="../img/gallery.png" alt="" class="Product__Image">
+                </figure>
+                <p class="Product__Caption">青いドア</p>
+                <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
+                <span class="Product__Price">¥ 500</span>
+                <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
+              </a>
+            </div>
+            <div class="Product__Item js-Product__Item">
+              <a href="#" class="Product__Link">
+                <figure class="Product__Figure">
+                  <img src="../img/gallery.png" alt="" class="Product__Image">
+                </figure>
+                <p class="Product__Caption">青いドア</p>
+                <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
+                <span class="Product__Price">¥ 500</span>
+                <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
+              </a>
+            </div>
+            <div class="Product__Item js-Product__Item">
+              <a href="#" class="Product__Link">
+                <figure class="Product__Figure">
+                  <img src="../img/gallery.png" alt="" class="Product__Image">
+                </figure>
+                <p class="Product__Caption">青いドア</p>
+                <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
+                <span class="Product__Price">¥ 500</span>
+                <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
+              </a>
+            </div>
+            <div class="Product__Item js-Product__Item">
+              <a href="#" class="Product__Link">
+                <figure class="Product__Figure">
+                  <img src="../img/gallery.png" alt="" class="Product__Image">
+                </figure>
+                <p class="Product__Caption">青いドア</p>
+                <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
+                <span class="Product__Price">¥ 500</span>
+                <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
+              </a>
+            </div>
+            <div class="Product__Item js-Product__Item">
+              <a href="#" class="Product__Link">
+                <figure class="Product__Figure">
+                  <img src="../img/gallery.png" alt="" class="Product__Image">
+                </figure>
+                <p class="Product__Caption">青いドア</p>
+                <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
+                <span class="Product__Price">¥ 500</span>
+                <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
+              </a>
+            </div>
+            <div class="Product__Item js-Product__Item">
+              <a href="#" class="Product__Link">
+                <figure class="Product__Figure">
+                  <img src="../img/gallery.png" alt="" class="Product__Image">
+                </figure>
+                <p class="Product__Caption">青いドア</p>
+                <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
+                <span class="Product__Price">¥ 500</span>
+                <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
+              </a>
+            </div>
+            <div class="Product__Item js-Product__Item">
+              <a href="#" class="Product__Link">
+                <figure class="Product__Figure">
+                  <img src="../img/gallery.png" alt="" class="Product__Image">
+                </figure>
+                <p class="Product__Caption">青いドア</p>
+                <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
+                <span class="Product__Price">¥ 500</span>
+                <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
+              </a>
+            </div>
+          </div>
+          <a href="#" class="Button Button--green mA pcmT30">ギャラリーに行ってみる</a>
+        </div>
+      </section>
+      <!-- ギャラリーここまで -->
+
+      <!-- QA -->
+      <section class="Question" id="js-Question">
+        <div class="Question__Wrapper Container">
+          <h2 class="SectionCaption js-SectionCaption mB30">Q&amp;A</h2>
+          <dl class="Question__Block js-Question__Block mB20">
+            <dt class="Question__Item js-Question__Title poR"><span class="Question__Icon Question__Icon--question">Q</span><span class="Question__Title">ブースとは? 利用にお金はかかりますか？</span><span class="Question__Icon Question__Icon--plus" aria-hidden="true">+</span></dt>
+            <dd class="Question__Answer js-Question__Answer">テキストテキストテキスト</dd>
+          </dl>
+          <dl class="Question__Block js-Question__Block mB20">
+            <dt class="Question__Item js-Question__Title poR"><span class="Question__Icon Question__Icon--question">Q</span><span class="Question__Title">他のECサイトや就活サイトとの違いは？</span><span class="Question__Icon Question__Icon--plus" aria-hidden="true">+</span></dt>
+            <dd class="Question__Answer js-Question__Answer">テキストテキストテキスト</dd>
+          </dl>
+          <dl class="Question__Block js-Question__Block mB20">
+            <dt class="Question__Item js-Question__Title poR"><span class="Question__Icon Question__Icon--question">Q</span><span class="Question__Title">作品の売り上げの利益に関して</span><span class="Question__Icon Question__Icon--plus" aria-hidden="true">+</span></dt>
+            <dd class="Question__Answer js-Question__Answer">テキストテキストテキスト</dd>
+          </dl>
+          <dl class="Question__Block js-Question__Block mB20">
+            <dt class="Question__Item js-Question__Title poR"><span class="Question__Icon Question__Icon--question">Q</span><span class="Question__Title">作品の受け渡し、受け取りに関して</span><span class="Question__Icon Question__Icon--plus" aria-hidden="true">+</span></dt>
+            <dd class="Question__Answer js-Question__Answer">テキストテキストテキスト</dd>
+          </dl>
+          <a href="#" class="Button Button--green mA">もっと詳しくみる</a>
+        </div>
+      </section>
+      <!-- QAここまで -->
+
+      <!-- バナー02 -->
+      <div class="Banner Banner--bottom">
+        <div class="Banner__Wrapper Container">
+          <p class="Banner__Caption mB30"><span class="mR5">作ったら。</span><span>飾りに行こう。</span>
+          </p>
+          <div class="Buttons">
+            <a href="#" class="Button Button--clear Button--banner mR20">ギャラリーに行ってみる</a>
+            <a href="#" class="Button Button--clear Button--banner">ブースに登録する</a>
+          </div>
+        </div>
+      </div>
+      <!-- バナー02ここまで -->
+      <!-- フッター -->
+      <footer class="MasterFoot">
+        <div class="MasterFoot__Wrapper">
+          <a href="#">
+            <img src="/img/logo.png" alt="COQOON" class="Logo Logo--footer mB20">
+          </a>
+          <ul class="MasterFoot__Navigation mB20">
+            <li class="MasterFoot__List"><a href="#" class="MasterFoot__Link">Q&amp;A</a>
             </li>
-            <li class="MasterHead__List"><a href="#" class="MasterHead__Link">Q&amp;A</a>
+            <li class="MasterFoot__List"><a href="#" class="MasterFoot__Link">お問い合わせ</a>
             </li>
-            <li class="MasterHead__List"><a href="#" class="MasterHead__Link MasterHead__Link--booth">ブースへ行く</a>
+            <li class="MasterFoot__List"><a href="#" class="MasterFoot__Link">運営企業</a>
+            </li>
+            <li class="MasterFoot__List"><a href="#" class="MasterFoot__Link">利用規約</a>
+            </li>
+            <li class="MasterFoot__List"><a href="#" class="MasterFoot__Link">プライバシーポリシー</a>
             </li>
           </ul>
-        </nav>
-        <a href="#" class="LoginButton LoginButton--booth">ブースへ行く</a>
-      </div>
-    </header>
-
-    <section class="TopHero">
-      <div class="TopHero__Wrapper Container">
-        <div class="TopHero__Texts mT40">
-          <p class="TopHero__Logo">
-            <img src="/img/logo.png" alt="COQOON" class="Logo Logo--topHero">
-          </p>
-          <h1 class="TopHero__Title"><span class="TopHero__TitleSpan mR20">作ったら。</span><span>飾りに行こう。</span></h1>
-          <h2 class="TopHero__SubTitle">学生クリエイターのための<br class="sp-br">オンラインギャラリー</h2>
-        </div>
-        <a href="#" class="Button Button--green js-Button--top">ギャラリーに行ってみる</a>
-      </div>
-      <a href="#js-About"><span class="Arrow js-Arrow" aria-hidden="true"></span></a>
-    </section>
-    <section class="About" id="js-About">
-      <div class="About__Wrapper Container">
-        <div class="About__Right">
-          <h2 class="SectionCaption mB30">COQOONって？</h2>
-          <p class="About__Description">COQOONとは、無料でオンラインギャラリーを提供し、学生クリエイターの作品を売り買いできるサービスです。個人で制作した「作品」を<span class="font22">ブース</span>に登録して出品できます。</p>
-          <a href="#" class="Button Button--green">ブースに登録する</a>
-        </div>
-        <div class="About__Left js-hideme">
-          <p class="About__Image">
-            <img src="/img/about_image.png" alt="">
+          <p class="MasterFoot__Copyright"><small>copyright(c) 2017 COQOON All Rights Reserves.</small>
           </p>
         </div>
-      </div>
-    </section>
-    <section class="Features" id="js-Features">
-      <div class="Features__Wrapper Container">
-        <h2 class="SectionCaption mB50">COQOON FEATURES</h2>
-        <div class="Features__Block">
-
-          <section class="Features__Item js-hideme">
-            <figure class="Features__Image mB30">
-              <img src="/img/features01.png" alt="">
-            </figure>
-            <h3 class="Features__Caption mB10">無料でいつでも出品</h3>
-            <p class="Features__Description">PC/スマホから、いつでも出品いただけます。作った作品でお小遣い稼ぎに！</p>
-          </section>
-
-          <section class="Features__Item js-hideme">
-            <figure class="Features__Image mB30">
-              <img src="/img/features02.png" alt="">
-            </figure>
-            <h3 class="Features__Caption mB10">売上利益が多い</h3>
-            <p class="Features__Description">COQOONでは、商品の売上利益を70%得ることができます。オンラインでの取引のため、多くの手数料がかかりません。</p>
-          </section>
-
-          <section class="Features__Item js-hideme">
-            <figure class="Features__Image mB30">
-              <img src="/img/features03.png" alt="">
-            </figure>
-            <h3 class="Features__Caption mB10">多種多様なギャラリー</h3>
-            <p class="Features__Description">家に置きっぱなしの作品。せっかく作ったデータ...などCOQOONならどんな作品でも出品できます！</p>
-          </section>
-
-          <section class="Features__Item js-hideme">
-            <figure class="Features__Image mB30">
-              <img src="/img/features04.png" alt="">
-            </figure>
-            <h3 class="Features__Caption mB10">選べる安心取引</h3>
-            <p class="Features__Description">希望に合った料金取引が可能です。銀行振込/クレジットカードまたビットコインなどの決済もご利用いただけます。</p>
-          </section>
-
-        </div>
-      </div>
-    </section>
-    <div class="Banner Banner--top">
-      <div class="Banner__Wrapper Container">
-        <h3 class="Banner__Caption mB30">作った。そのまま？</h3>
-        <p class="Banner__Text mB50">「<span class="font22">部屋</span>」から「<span class="font22">外</span>」へ飾りに行こう。
-          <br class="pc-br">COQOONのギャラリーには、ジャンルには表せられない程の
-          <br class="pc-br">作品が出品されています。COQOONなら誰でもどんな作品でも
-          <br class="pc-br">ギャラリーに飾ることができます。</p>
-        <a href="#" class="Button Button--clear mA">ギャラリーに行ってみる</a>
-      </div>
+      </footer>
+      <!-- フッターここまで -->
     </div>
-    <section class="Service" id="js-Service">
-      <div class="Service__Wrapper Container">
-        <h2 class="SectionCaption mB20">SERVICE POINT</h2>
-        <p class="Service__Description mB40">COQOONでは、作品をブースに登録する事で、無料でオンラインギャラリーに出品できます。
-          <br class="pc-br">また、他のユーザーが出品した作品を買う事もできます。
-          <br class="pc-br">まずは自分のブースを登録してみましょう!</p>
-        <ol class="Service__Flow js-hideme">
-          <li class="Service__Item Service__Item--green js-Service__Item poR"><span class="Service__Number">1</span><span class="Service__Text">個人で作った作品を<br class="pc-br">ブースに登録</span><span class="Border Border--top js-Border--top"></span><span class="Border Border--bottom js-Border--bottom"></span>
-          </li>
-          <li class="Service__Item"><span class="Service__Number">2</span><span class="Service__Text">ブースに登録した<br class="pc-br">作品をギャラリーに出品</span>
-          </li>
-          <li class="Service__Item"><span class="Service__Number">3</span><span class="Service__Text">出品された作品を<br class="pc-br">ギャラリー内で<br class="pc-br">売買しよう</span>
-          </li>
-          <li class="Service__Item Service__Item--extra poR"><span class="Service__Number">EX</span><span class="Service__Text Service_">作品を出品すると、<br class="pc-br">企業からスカウトがきます。</span><span class="Border Border--Extra js-Border--Extra"></span>
-          </li>
-        </ol>
-        <a href="#" class="Button Button--green mA pcmT50">ブースに登録する</a>
-      </div>
-    </section>
-    <section class="Portfolio" id="js-Portfolio">
-      <div class="Portfolio__Wrapper Container">
-        <h2 class="SectionCaption js-SectionCaption mB20">PORTFOLIO / JOB</h2>
-        <p class="Portfolio__Description mB50">COQOONでは、ブースを自身のポートフォリオとしてご利用いただけます。
-          <br class="pc-br">作品をブースに登録し出品すると、ブースを参考に企業からスカウトがもらえたり、直接声がかかります。また、ブースをポートフォリオとして使い就職活動をする事ができます。
-          <br class="pc-br">作品を出品して企業からスカウトをもらおう！</p>
-        <div class="Portfolio__GetScout js-hideme">
-          <p class="Portfolio__GetScoutText">スカウトがもらえる企業一覧</p>
-          <div class="Portfolio__Companies">
-
-            <p class="Portfolio__CompanyImage">
-              <img src="/img/com_01.png" alt="">
-            </p>
-
-            <p class="Portfolio__CompanyImage">
-              <img src="/img/com_02.png" alt="">
-            </p>
-
-            <p class="Portfolio__CompanyImage">
-              <img src="/img/com_03.png" alt="">
-            </p>
-
-            <p class="Portfolio__CompanyImage">
-              <img src="/img/com_04.png" alt="">
-            </p>
-
-            <p class="Portfolio__CompanyImage">
-              <img src="/img/com_05.png" alt="">
-            </p>
-
-            <p class="Portfolio__CompanyImage">
-              <img src="/img/com_06.png" alt="">
-            </p>
-
-            <p class="Portfolio__CompanyImage">
-              <img src="/img/com_07.png" alt="">
-            </p>
-
-            <p class="Portfolio__CompanyImage">
-              <img src="/img/com_08.png" alt="">
-            </p>
-
-            <p class="Portfolio__CompanyImage">
-              <img src="/img/com_09.png" alt="">
-            </p>
-
-            <p class="Portfolio__CompanyImage">
-              <img src="/img/com_10.png" alt="">
-            </p>
-
-            <p class="Portfolio__CompanyImage">
-              <img src="/img/com_11.png" alt="">
-            </p>
-
-            <p class="Portfolio__CompanyImage">
-              <img src="/img/com_12.png" alt="">
-            </p>
-
-            <p class="Portfolio__CompanyImage">
-              <img src="/img/com_13.png" alt="">
-            </p>
-
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="Gallery Product" id="js-Gallery">
-      <div class="Gallery__Wrapper Container">
-        <h2 class="SectionCaption js-SectionCaption mB20">ABOUT GALLERY</h2>
-        <p class="Gallery__Description mB20">最近出品された作品をみてみましょう！</p>
-        <div class="Product__Block js-Product__Block js-hideme">
-
-          <div class="Product__Item js-Product__Item">
-            <a href="#" class="Product__Link">
-              <figure class="Product__Figure">
-                <img src="../img/gallery.png" alt="" class="Product__Image">
-              </figure>
-              <p class="Product__Caption">青いドア</p>
-              <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
-              <span class="Product__Price">¥ 500</span>
-              <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
-            </a>
-          </div>
-
-          <div class="Product__Item js-Product__Item">
-            <a href="#" class="Product__Link">
-              <figure class="Product__Figure">
-                <img src="../img/gallery.png" alt="" class="Product__Image">
-              </figure>
-              <p class="Product__Caption">青いドア</p>
-              <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
-              <span class="Product__Price">¥ 500</span>
-              <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
-            </a>
-          </div>
-
-          <div class="Product__Item js-Product__Item">
-            <a href="#" class="Product__Link">
-              <figure class="Product__Figure">
-                <img src="../img/gallery.png" alt="" class="Product__Image">
-              </figure>
-              <p class="Product__Caption">青いドア</p>
-              <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
-              <span class="Product__Price">¥ 500</span>
-              <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
-            </a>
-          </div>
-          <div class="Product__Item js-Product__Item">
-            <a href="#" class="Product__Link">
-              <figure class="Product__Figure">
-                <img src="../img/gallery.png" alt="" class="Product__Image">
-              </figure>
-              <p class="Product__Caption">青いドア</p>
-              <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
-              <span class="Product__Price">¥ 500</span>
-              <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
-            </a>
-          </div>
-
-          <div class="Product__Item js-Product__Item">
-            <a href="#" class="Product__Link">
-              <figure class="Product__Figure">
-                <img src="../img/gallery.png" alt="" class="Product__Image">
-              </figure>
-              <p class="Product__Caption">青いドア</p>
-              <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
-              <span class="Product__Price">¥ 500</span>
-              <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
-            </a>
-          </div>
-          <div class="Product__Item js-Product__Item">
-            <a href="#" class="Product__Link">
-              <figure class="Product__Figure">
-                <img src="../img/gallery.png" alt="" class="Product__Image">
-              </figure>
-              <p class="Product__Caption">青いドア</p>
-              <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
-              <span class="Product__Price">¥ 500</span>
-              <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
-            </a>
-          </div>
-          <div class="Product__Item js-Product__Item">
-            <a href="#" class="Product__Link">
-              <figure class="Product__Figure">
-                <img src="../img/gallery.png" alt="" class="Product__Image">
-              </figure>
-              <p class="Product__Caption">青いドア</p>
-              <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
-              <span class="Product__Price">¥ 500</span>
-              <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
-            </a>
-          </div>
-          <div class="Product__Item js-Product__Item">
-            <a href="#" class="Product__Link">
-              <figure class="Product__Figure">
-                <img src="../img/gallery.png" alt="" class="Product__Image">
-              </figure>
-              <p class="Product__Caption">青いドア</p>
-              <p class="Product__Description">てきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすとてきすと</p>
-              <span class="Product__Price">¥ 500</span>
-              <span class="BuyBotton BuyBotton__Product BuyBotton--pink">コクる</span>
-            </a>
-          </div>
-        </div>
-        <a href="#" class="Button Button--green mA pcmT30">ギャラリーに行ってみる</a>
-      </div>
-    </section>
-    <section class="Question" id="js-Question">
-      <div class="Question__Wrapper Container">
-        <h2 class="SectionCaption js-SectionCaption mB30">Q&amp;A</h2>
-        <dl class="Question__Block js-Question__Block mB20">
-          <dt class="Question__Item js-Question__Title poR"><span class="Question__Icon Question__Icon--question">Q</span><span class="Question__Title">ブースとは? 利用にお金はかかりますか？</span><span class="Question__Icon Question__Icon--plus" aria-hidden="true">+</span></dt>
-          <dd class="Question__Answer js-Question__Answer">テキストテキストテキスト</dd>
-        </dl>
-        <dl class="Question__Block js-Question__Block mB20">
-          <dt class="Question__Item js-Question__Title poR"><span class="Question__Icon Question__Icon--question">Q</span><span class="Question__Title">他のECサイトや就活サイトとの違いは？</span><span class="Question__Icon Question__Icon--plus" aria-hidden="true">+</span></dt>
-          <dd class="Question__Answer js-Question__Answer">テキストテキストテキスト</dd>
-        </dl>
-        <dl class="Question__Block js-Question__Block mB20">
-          <dt class="Question__Item js-Question__Title poR"><span class="Question__Icon Question__Icon--question">Q</span><span class="Question__Title">作品の売り上げの利益に関して</span><span class="Question__Icon Question__Icon--plus" aria-hidden="true">+</span></dt>
-          <dd class="Question__Answer js-Question__Answer">テキストテキストテキスト</dd>
-        </dl>
-        <dl class="Question__Block js-Question__Block mB20">
-          <dt class="Question__Item js-Question__Title poR"><span class="Question__Icon Question__Icon--question">Q</span><span class="Question__Title">作品の受け渡し、受け取りに関して</span><span class="Question__Icon Question__Icon--plus" aria-hidden="true">+</span></dt>
-          <dd class="Question__Answer js-Question__Answer">テキストテキストテキスト</dd>
-        </dl>
-        <a href="#" class="Button Button--green mA">もっと詳しくみる</a>
-      </div>
-    </section>
-    <div class="Banner Banner--bottom">
-      <div class="Banner__Wrapper Container">
-        <p class="Banner__Caption mB30"><span class="mR5">作ったら。</span><span>飾りに行こう。</span>
-        </p>
-        <div class="Buttons">
-          <a href="#" class="Button Button--clear Button--banner mR20">ギャラリーに行ってみる</a>
-          <a href="#" class="Button Button--clear Button--banner">ブースに登録する</a>
-        </div>
-      </div>
-    </div>
-    <footer class="MasterFoot">
-      <div class="MasterFoot__Wrapper">
-        <a href="#">
-          <img src="/img/logo.png" alt="COQOON" class="Logo Logo--footer mB20">
-        </a>
-        <ul class="MasterFoot__Navigation mB20">
-          <li class="MasterFoot__List"><a href="#" class="MasterFoot__Link">Q&amp;A</a>
-          </li>
-          <li class="MasterFoot__List"><a href="#" class="MasterFoot__Link">お問い合わせ</a>
-          </li>
-          <li class="MasterFoot__List"><a href="#" class="MasterFoot__Link">運営企業</a>
-          </li>
-          <li class="MasterFoot__List"><a href="#" class="MasterFoot__Link">利用規約</a>
-          </li>
-          <li class="MasterFoot__List"><a href="#" class="MasterFoot__Link">プライバシーポリシー</a>
-          </li>
-        </ul>
-        <p class="MasterFoot__Copyright"><small>copyright(c) 2017 COQOON All Rights Reserves.</small>
-        </p>
-      </div>
-    </footer>
-
-  </div>
-  <script src="/js/style.js"></script>
-</body>
-
+    <!-- 全体wrapperここまで -->
+    <script src="/js/style.js"></script>
+  </body>
 </html>
