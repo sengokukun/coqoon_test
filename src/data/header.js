@@ -1,41 +1,20 @@
 module.exports = [
   {
-    "ComNum" : "01"
+    "HeadList" : "ABOUT"
   },
   {
-    "ComNum" : "02"
+    "HeadList" : "FEATURES"
   },
   {
-    "ComNum" : "03"
+    "HeadList" : "SERVICE"
   },
   {
-    "ComNum" : "04"
+    "HeadList" : "PORTFOLIO / JOB"
   },
   {
-    "ComNum" : "05"
+    "HeadList" : "GALLERY"
   },
   {
-    "ComNum" : "06"
-  },
-  {
-    "ComNum" : "07"
-  },
-  {
-    "ComNum" : "08"
-  },
-  {
-    "ComNum" : "09"
-  },
-  {
-    "ComNum" : "10"
-  },
-  {
-    "ComNum" : "11"
-  },
-  {
-    "ComNum" : "12"
-  },
-  {
-    "ComNum" : "13"
+    "HeadList" : "Q&A"
   }
 ];
