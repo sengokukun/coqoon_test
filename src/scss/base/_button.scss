@@ -10,6 +10,7 @@ $color: #d3f169;
 	font-size: 1.8rem;
 	position: relative;
 	display: block;
+	transition: all .2s;
 
 	@include media ($sp) {
 		width: 100%;
